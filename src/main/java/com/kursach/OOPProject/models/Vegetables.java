@@ -9,14 +9,12 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class VeganDishes
+public class Vegetables
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
-    private String veganDishName,composition;
+    private String vegetableName;
     private double proteins,fats,carbohydrates,calories;
-
 }

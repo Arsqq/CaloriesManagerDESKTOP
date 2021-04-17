@@ -36,7 +36,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
             parent=fxmlLoader.load();
 
             Stage stage=event.getStage();
-            stage.setScene(new Scene(parent,800,800));
+            stage.setScene(new Scene(parent,910,675));
             stage.setTitle(applicationTitle);
             stage.centerOnScreen();
             stage.show();

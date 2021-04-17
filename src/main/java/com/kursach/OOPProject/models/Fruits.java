@@ -1,5 +1,6 @@
 package com.kursach.OOPProject.models;
 
+
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -7,16 +8,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Data
 @Entity
-public class VeganDishes
+@Data
+public class Fruits
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
-    private String veganDishName,composition;
+    private String fruitName;
     private double proteins,fats,carbohydrates,calories;
-
 }
