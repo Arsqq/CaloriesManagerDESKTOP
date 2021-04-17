@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group = 'com.kursach'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation "mysql:mysql-connector-java:6.0.6"
+	runtimeOnly 'mysql:mysql-connector-java'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+javafx {
+	version = '16'
+	modules = [ 'javafx.controls', 'javafx.fxml','javafx.graphics','javafx.base','javafx.media' ]
+}
+
