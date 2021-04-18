@@ -3,35 +3,136 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="905.0" style="-fx-background-color: #e6e6fa;" styleClass="anchor" stylesheets="@FxCss/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="905.0" style="-fx-background-color: #57767d;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="-14.0" layoutY="149.0" prefHeight="536.0" prefWidth="921.0" style="-fx-background-color: #fffacd;">
+      <AnchorPane layoutX="-8.0" layoutY="150.0" prefHeight="536.0" prefWidth="921.0" style="-fx-background-color: #201d23;">
          <effect>
             <Glow level="0.08" />
          </effect>
-         <children>
-            <Button layoutX="350.0" layoutY="173.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="224.0" text="Завтрак" />
-            <Button layoutX="349.0" layoutY="245.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="224.0" text="Обед" />
-            <Button layoutX="350.0" layoutY="323.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="224.0" text="Ужин" />
-            <Label layoutX="95.0" layoutY="55.0" text="Выберите время приема пищи">
-               <font>
-                  <Font name="Chocolate cyr-lat" size="48.0" />
-               </font>
-            </Label>
-         </children>
+         <Label layoutX="14.0" layoutY="14.0" prefHeight="59.0" prefWidth="560.0" text="Выберите время приема пищи">
+            <font>
+               <Font name="Nine By Five NBP" size="60.0" />
+            </font>
+            <textFill>
+               <RadialGradient centerX="0.5055555555555554" centerY="0.30952380952380965" focusAngle="153.43" focusDistance="0.04651162790697683" radius="0.5813953488372093">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.26385271549224854" green="0.36000001430511475" blue="0.1656000018119812" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.007662835249042145">
+                        <color>
+                           <Color green="1.0" blue="0.8500000238418579" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.6578947305679321" green="0.4721003770828247" blue="0.10051169246435165" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </textFill>
+         </Label>
+         <Separator layoutX="663.0" orientation="VERTICAL" prefHeight="570.0" prefWidth="7.0" />
+         <VBox layoutX="14.0" layoutY="169.0" prefHeight="401.0" prefWidth="301.0">
+            <children>
+               <Button mnemonicParsing="false" prefHeight="115.0" prefWidth="364.0" style="-fx-background-color: #201d23;" text="Завтрак">
+                  <font>
+                     <Font name="progresspixel-bold" size="48.0" />
+                  </font>
+                  <textFill>
+                     <RadialGradient centerX="0.45555555555555555" centerY="0.7619047619047621" focusAngle="153.43" focusDistance="0.04651162790697683" radius="0.5813953488372093">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.26385271549224854" green="0.36000001430511475" blue="0.1656000018119812" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color green="1.0" blue="0.8500000238418579" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.8421052694320679" green="0.5029239654541016" blue="0.5029239654541016" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </textFill>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="262.0" style="-fx-background-color: #201d23;" text="Обед">
+                  <font>
+                     <Font name="progresspixel-bold" size="48.0" />
+                  </font>
+                  <textFill>
+                     <RadialGradient centerX="0.45555555555555555" centerY="0.7619047619047621" focusAngle="153.43" focusDistance="0.04651162790697683" radius="0.5813953488372093">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.26385271549224854" green="0.36000001430511475" blue="0.1656000018119812" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color green="1.0" blue="0.8500000238418579" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.9078947305679321" green="0.22697368264198303" blue="0.22697368264198303" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </textFill>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="262.0" style="-fx-background-color: #201d23;" text="Ужин">
+                  <font>
+                     <Font name="progresspixel-bold" size="48.0" />
+                  </font>
+                  <textFill>
+                     <RadialGradient centerX="0.5055555555555554" centerY="0.30952380952380965" focusAngle="153.43" focusDistance="0.04651162790697683" radius="0.5813953488372093">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="0.26385271549224854" green="0.36000001430511475" blue="0.1656000018119812" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.007662835249042145">
+                              <color>
+                                 <Color green="1.0" blue="0.8500000238418579" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.8552631735801697" green="0.32072368264198303" blue="0.32072368264198303" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </RadialGradient>
+                  </textFill>
+               </Button>
+            </children>
+         </VBox>
       </AnchorPane>
-      <Label layoutX="243.0" layoutY="19.0" style="-fx-background-image: #00ff7f;" text="Calories Manager">
+      <Label layoutX="258.0" layoutY="37.0" style="-fx-background-image: #00ff7f;" text="Calories Manager">
          <font>
-            <Font name="Chocolate cyr-lat" size="48.0" />
+            <Font name="progresspixel-bold" size="40.0" />
          </font>
          <textFill>
             <RadialGradient centerX="0.8222222222222222" centerY="0.09523809523809534" cycleMethod="REFLECT" focusAngle="153.43" focusDistance="0.04651162790697683" radius="0.5813953488372093">
@@ -55,7 +156,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <ImageView fitHeight="169.0" fitWidth="285.0" layoutX="-57.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="163.0" fitWidth="279.0" layoutX="-39.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@FxCss/back.jpg" />
          </image>
@@ -63,10 +164,13 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="254.0" layoutX="672.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="256.0" layoutX="658.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@FxCss/diet-and-nutrition.jpg" />
+            <Image url="@FxCss/back.jpg" />
          </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
       </ImageView>
    </children>
 </AnchorPane>
