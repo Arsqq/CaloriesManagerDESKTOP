@@ -1,0 +1,14 @@
+
+.primary-color
+{
+    -fx-background-color: #FFFFFF;
+}
+.secondary-color
+{
+    -fx-background-color: #8e8e8e;
+}
+
+.round-border
+{
+    -fx-background-radius: 100;
+}

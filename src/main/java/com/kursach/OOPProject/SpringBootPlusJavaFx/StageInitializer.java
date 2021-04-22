@@ -12,11 +12,12 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.Objects;
 
 @Component
 public class StageInitializer implements ApplicationListener<StageReadyEvent>
 {
-    @Value("classpath:/main-scene.fxml")
+    @Value("classpath:/xml/main-scene.fxml")
     private Resource sceneResourse;
 
     private final ApplicationContext springContext;
@@ -36,7 +37,9 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
             parent=fxmlLoader.load();
 
             Stage stage=event.getStage();
-            stage.setScene(new Scene(parent,910,675));
+            Scene scene=new Scene(parent);
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getClassLoader().getResource("css/style.css")).toExternalForm());
+            stage.setScene(scene);
             stage.setTitle(applicationTitle);
             stage.centerOnScreen();
             stage.show();
