@@ -17,168 +17,316 @@
 <AnchorPane fx:id="parentAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" styleClass="primary-color" stylesheets="@../css/lightmode.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.MainSceneController">
    <BorderPane fx:id="parent" layoutX="-6.0" prefHeight="200.0" prefWidth="200.0" styleClass="primary-color" stylesheets="@../css/lightmode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
       <left>
-         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="435.0" styleClass="secondary-color" stylesheets="@../css/lightmode.css" BorderPane.alignment="TOP_LEFT">
-            <children>
-               <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0" stylesheets="@../css/lightmode.css">
-                  <Label fx:id="caloriesLabel" alignment="CENTER" prefHeight="60.0" prefWidth="197.0" styleClass="shadow" text="Calories" textFill="#3c3c3c">
-                     <font>
-                        <Font name="Rustico Regular" size="48.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="managerLabel" alignment="CENTER" prefHeight="60.0" prefWidth="197.0" styleClass="shadow" text="Manager" textFill="#3c3c3c">
-                     <font>
-                        <Font name="Rustico Regular" size="48.0" />
-                     </font>
-                  </Label>
-               </HBox>
-               <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0" stylesheets="@../css/style.css">
-                  <opaqueInsets>
-                     <Insets />
-                  </opaqueInsets>
-                  <VBox.margin>
-                     <Insets left="30.0" right="30.0" />
-                  </VBox.margin>
-                  <TextField prefHeight="45.0" prefWidth="269.0" promptText="Type here to calculate" styleClass="transp" stylesheets="@../css/style.css">
-                     <font>
-                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
-                     </font>
-                  </TextField>
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" stylesheets="@../css/style.css" text="GO" textFill="WHITE">
-                     <font>
-                        <Font name="BRIPOKUS" size="18.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="search-button" />
-                        <String fx:value="primary-color" />
-                     </styleClass>
-                  </Button>
+         <VBox fx:id="rightVbox" alignment="TOP_CENTER" prefHeight="810.0" prefWidth="431.0" style="-fx-background-color: #BAEAC3;" BorderPane.alignment="TOP_LEFT">
+            <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0" stylesheets="@../css/lightmode.css">
+               <Label fx:id="caloriesLabel" alignment="CENTER" prefHeight="60.0" prefWidth="197.0" styleClass="shadow" text="Calories" textFill="#3c3c3c">
+                  <font>
+                     <Font name="Rustico Regular" size="48.0" />
+                  </font>
+               </Label>
+               <Label fx:id="managerLabel" alignment="CENTER" prefHeight="60.0" prefWidth="197.0" styleClass="shadow" text="Manager" textFill="#3c3c3c">
+                  <font>
+                     <Font name="Rustico Regular" size="48.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0" stylesheets="@../css/style.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <TextField fx:id="productTextField" prefHeight="45.0" prefWidth="269.0" promptText="Type here to calculate" styleClass="transp" stylesheets="@../css/style.css">
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                  </font>
+               </TextField>
+               <Button fx:id="calculatorButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" stylesheets="@../css/style.css" text="GO" textFill="WHITE">
+                  <font>
+                     <Font name="BRIPOKUS" size="18.0" />
+                  </font>
                   <styleClass>
-                     <String fx:value="search-box" />
-                     <String fx:value="shadow" />
+                     <String fx:value="search-button" />
+                     <String fx:value="primary-color" />
                   </styleClass>
+               </Button>
+               <styleClass>
+                  <String fx:value="search-box" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </HBox>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="460.0" prefWidth="335.0" styleClass="chosenFun" stylesheets="@../css/style.css">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="60.0" />
+               </VBox.margin>
+               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="452.0">
+                  <children>
+                     <Label alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="BMI count">
+                        <font>
+                           <Font name="Cambria Bold" size="36.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
                </HBox>
-            </children>
+               <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Pictures/calculation-145-838760.png" />
+               </ImageView>
+               <HBox prefHeight="100.0" prefWidth="362.0">
+                  <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*Calculates your body mass index*">
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="310.0" styleClass="addBtn" stylesheets="@../css/style.css" text="EXECUTE">
+                  <font>
+                     <Font name="Rustico Regular" size="24.0" />
+                  </font>
+               </Button>
+            </VBox>
          </VBox>
       </left>
       <center>
          <VBox prefHeight="818.0" prefWidth="898.0" BorderPane.alignment="CENTER">
-            <children>
-               <HBox alignment="BASELINE_CENTER" prefHeight="75.0" prefWidth="880.0" styleClass="primary-color">
+            <HBox alignment="BASELINE_CENTER" prefHeight="75.0" prefWidth="880.0" styleClass="primary-color">
+               <children>
+                  <Label fx:id="themeLabel" alignment="CENTER" prefHeight="23.0" prefWidth="210.0" text="Current theme-" textFill="#878787">
+                     <font>
+                        <Font name="Rustico Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lightLabel" prefHeight="42.0" prefWidth="188.0" text="light" textFill="#878787">
+                     <font>
+                        <Font name="Rustico Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="100.0" prefWidth="716.0" stylesheets="@../css/lightmode.css">
+                     <children>
+                        <Label fx:id="modeLabel" layoutX="491.0" layoutY="8.0" prefHeight="42.0" prefWidth="97.0" text="Light Mode" textFill="#878787">
+                           <font>
+                              <Font name="Rustico Regular" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="switchMode" alignment="BOTTOM_LEFT" blendMode="DARKEN" layoutX="578.0" layoutY="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="primary-color" textFill="#878787">
+                           <graphic>
+                              <ImageView fx:id="imgView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Pictures/moon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox prefHeight="113.0" prefWidth="880.0">
+               <HBox prefHeight="113.0" prefWidth="428.0" styleClass="chart" stylesheets="@../css/style.css">
+                  <HBox.margin>
+                     <Insets left="20.0" right="20.0" top="10.0" />
+                  </HBox.margin>
+                  <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="308.0" stylesheets="@../css/style.css">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </HBox.margin>
+                     <Label fx:id="shoppingCartLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="Fill your shopping cart" textFill="#858585">
+                        <font>
+                           <Font name="Cambria Bold" size="20.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="groceriesLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="with groceries you have" textFill="#858585">
+                        <font>
+                           <Font name="Cambria Italic" size="20.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+                  <Button fx:id="cartButton" alignment="CENTER" blendMode="DARKEN" mnemonicParsing="false" prefHeight="70.0" prefWidth="85.0" textFill="#878787">
+                     <graphic>
+                        <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                           <Image url="@../Pictures/istockphoto-1206806317-612x612.jpg" />
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="round-border" />
+                        <String fx:value="primary-color" />
+                     </styleClass>
+                  </Button>
+               </HBox>
+               <Pane prefHeight="128.0" prefWidth="111.0" />
+               <HBox prefHeight="113.0" prefWidth="428.0" stylesheets="@../css/style.css">
                   <children>
-                     <Label fx:id="themeLabel" alignment="CENTER" prefHeight="23.0" prefWidth="210.0" text="Current theme-" textFill="#878787">
-                        <font>
-                           <Font name="Rustico Regular" size="18.0" />
-                        </font>
-                     </Label>
-                     <Label fx:id="lightLabel" prefHeight="42.0" prefWidth="188.0" text="light" textFill="#878787">
-                        <font>
-                           <Font name="Rustico Regular" size="18.0" />
-                        </font>
-                     </Label>
-                     <Pane prefHeight="100.0" prefWidth="716.0" stylesheets="@../css/lightmode.css">
+                     <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="308.0" stylesheets="@../css/style.css">
                         <children>
-                           <Label fx:id="modeLabel" layoutX="491.0" layoutY="8.0" prefHeight="42.0" prefWidth="97.0" text="Light Mode" textFill="#878787">
+                           <Label fx:id="planLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="Plan a healthy diet" textFill="#858585">
                               <font>
-                                 <Font name="Rustico Regular" size="18.0" />
+                                 <Font name="Cambria Bold" size="20.0" />
                               </font>
                            </Label>
-                           <Button fx:id="switchMode" alignment="BOTTOM_LEFT" blendMode="DARKEN" layoutX="578.0" layoutY="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="primary-color" textFill="#878787">
-                              <graphic>
-                                 <ImageView fx:id="imgView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@../Pictures/moon.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                           </Button>
-                        </children>
-                     </Pane>
-                  </children>
-               </HBox>
-               <HBox prefHeight="113.0" prefWidth="880.0">
-                  <children>
-                     <HBox prefHeight="113.0" prefWidth="428.0" styleClass="chart" stylesheets="@../css/style.css">
-                        <children>
-                           <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="308.0" stylesheets="@../css/style.css">
-                              <children>
-                                 <Label fx:id="shoppingCartLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="Fill your shopping cart" textFill="#858585">
-                                    <font>
-                                       <Font name="Cambria Bold" size="20.0" />
-                                    </font>
-                                 </Label>
-                                 <Label fx:id="groceriesLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="with groceries you have" textFill="#858585">
-                                    <font>
-                                       <Font name="Cambria Italic" size="20.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                              <HBox.margin>
-                                 <Insets left="20.0" right="20.0" top="10.0" />
-                              </HBox.margin>
-                           </VBox>
-                           <Button fx:id="cartButton" alignment="CENTER" blendMode="DARKEN" mnemonicParsing="false" prefHeight="70.0" prefWidth="85.0" textFill="#878787">
-                              <graphic>
-                                 <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@../Pictures/istockphoto-1206806317-612x612.jpg" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                              <styleClass>
-                                 <String fx:value="round-border" />
-                                 <String fx:value="primary-color" />
-                              </styleClass>
-                           </Button>
+                           <Label fx:id="dietNumLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="there are three types!" textFill="#858585">
+                              <font>
+                                 <Font name="Cambria Italic" size="20.0" />
+                              </font>
+                           </Label>
                         </children>
                         <HBox.margin>
                            <Insets left="20.0" right="20.0" top="10.0" />
                         </HBox.margin>
-                     </HBox>
-                     <Pane prefHeight="128.0" prefWidth="111.0" />
-                     <HBox prefHeight="113.0" prefWidth="428.0" stylesheets="@../css/style.css">
-                        <children>
-                           <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="308.0" stylesheets="@../css/style.css">
-                              <children>
-                                 <Label fx:id="planLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="Plan a healthy diet" textFill="#858585">
-                                    <font>
-                                       <Font name="Cambria Bold" size="20.0" />
-                                    </font>
-                                 </Label>
-                                 <Label fx:id="dietNumLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="there are three types!" textFill="#858585">
-                                    <font>
-                                       <Font name="Cambria Italic" size="20.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                              <HBox.margin>
-                                 <Insets left="20.0" right="20.0" top="10.0" />
-                              </HBox.margin>
-                           </VBox>
-                           <Button fx:id="dietButton" alignment="BOTTOM_LEFT" blendMode="DARKEN" mnemonicParsing="false" prefHeight="34.0" prefWidth="0.0" textFill="#878787">
-                              <graphic>
-                                 <ImageView fitHeight="100.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                       <Image url="@../Pictures/490-4908483_eating-healthy-food-png-black-and-white-balanced.png" />
-                                    </image>
-                                 </ImageView>
-                              </graphic>
-                              <styleClass>
-                                 <String fx:value="round-border" />
-                                 <String fx:value="primary-color" />
-                              </styleClass>
-                           </Button>
-                        </children>
-                        <HBox.margin>
-                           <Insets left="20.0" right="20.0" top="10.0" />
-                        </HBox.margin>
+                     </VBox>
+                     <Button fx:id="dietButton" alignment="BOTTOM_LEFT" blendMode="DARKEN" mnemonicParsing="false" prefHeight="34.0" prefWidth="0.0" textFill="#878787">
+                        <graphic>
+                           <ImageView fitHeight="100.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../Pictures/490-4908483_eating-healthy-food-png-black-and-white-balanced.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
                         <styleClass>
-                           <String fx:value="chart" />
-                           <String fx:value="diet" />
+                           <String fx:value="round-border" />
+                           <String fx:value="primary-color" />
                         </styleClass>
-                     </HBox>
+                     </Button>
                   </children>
+                  <HBox.margin>
+                     <Insets left="20.0" right="20.0" top="10.0" />
+                  </HBox.margin>
+                  <styleClass>
+                     <String fx:value="chart" />
+                     <String fx:value="diet" />
+                  </styleClass>
                </HBox>
-            </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="607.0" prefWidth="930.0">
+                     <children>
+                        <ImageView fitHeight="520.0" fitWidth="889.0" layoutX="1.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pictures/back.jpg" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="14.0" layoutY="100.0" prefHeight="240.0" prefWidth="260.0" stylesheets="@../css/style.css">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="53.0" prefWidth="261.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="Randomizer">
+                                       <font>
+                                          <Font name="Cambria Bold" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" style="-fx-background-color: #faac0f;">
+                                 <graphic>
+                                    <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="chosenFun">
+                                       <image>
+                                          <Image url="@../Pictures/246569.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <HBox prefHeight="100.0" prefWidth="362.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*get a random dish*">
+                                       <font>
+                                          <Font name="Cambria Italic" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <styleClass>
+                              <String fx:value="chosenFun" />
+                              <String fx:value="randomFun" />
+                           </styleClass>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="330.0" layoutY="101.0" prefHeight="239.0" prefWidth="253.0" styleClass="normFun" stylesheets="@../css/style.css">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="452.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="46.0" prefWidth="266.0" text="CaloriesNorm">
+                                       <font>
+                                          <Font name="Cambria Bold" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" style="-fx-background-color: #d0e0ad;">
+                                 <graphic>
+                                    <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Pictures/equipment_car-512.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <HBox prefHeight="100.0" prefWidth="362.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*select meal time*">
+                                       <font>
+                                          <Font name="Cambria Italic" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="630.0" layoutY="101.0" prefHeight="239.0" prefWidth="253.0" styleClass="diaryFun" stylesheets="@../css/style.css">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="452.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="46.0" prefWidth="292.0" text="CaloriesDiary">
+                                       <font>
+                                          <Font name="Cambria Bold" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" style="-fx-background-color: #b0fa0f;">
+                                 <graphic>
+                                    <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Pictures/x-10-512.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <HBox prefHeight="100.0" prefWidth="362.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*sum your calories for day*">
+                                       <font>
+                                          <Font name="Cambria Italic" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox layoutX="1.0" prefHeight="100.0" prefWidth="883.0">
+                           <children>
+                              <Label fx:id="quoteLabel" alignment="CENTER" prefHeight="63.0" prefWidth="883.0" text="Physical fitness is the first requisite of happiness.">
+                                 <font>
+                                    <Font name="Rustico Regular" size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
          </VBox>
       </center>
    </BorderPane>

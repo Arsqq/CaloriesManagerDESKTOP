@@ -36,3 +36,37 @@
     -fx-background-color: #BAEAC3;
     -fx-background-radius: 30;
 }
+
+.chosenFun
+{
+    -fx-background-color: #ff6c03  ;
+    -fx-background-radius: 30;
+}
+
+.randomFun
+{
+    -fx-background-color: #faac0f  ;
+    -fx-background-radius: 30;
+}
+
+.diaryFun
+{
+    -fx-background-color: #b0fa0f  ;
+    -fx-background-radius: 30;
+}
+.normFun
+{
+    -fx-background-color: #d0e0ad  ;
+    -fx-background-radius: 30;
+}
+
+.addBtn
+{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+}
+
+.vbox
+{
+    -fx-background-color: #50d4c4;
+}

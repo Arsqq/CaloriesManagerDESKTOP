@@ -6,9 +6,10 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Repository
 public interface MilkProductsRepository extends CrudRepository<MilkProducts,Long>
 {
-    MilkProducts findByMilkProductName(String milkProductName);
+   MilkProducts findByMilkProductName(String milkProductName);
 }
