@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="892.0" styleClass="chart" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.InfoWindowController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="892.0" styleClass="normFun" stylesheets="@../css/style.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="889.0" stylesheets="@../css/style.css" text="Calories Info">
+               <font>
+                  <Font name="Rustico Regular" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="100.0" prefHeight="100.0" prefWidth="892.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="142.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="71.0" prefWidth="119.0" text="Name">
+                           <font>
+                              <Font name="Rustico Regular" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="173.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="74.0" prefWidth="194.0" text="Calories">
+                     <font>
+                        <Font name="Rustico Regular" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="189.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="74.0" prefWidth="158.0" text="Proteins">
+                     <font>
+                        <Font name="Rustico Regular" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="180.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="74.0" prefWidth="363.0" text="Fats">
+                     <font>
+                        <Font name="Rustico Regular" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" text="Carbohydrates">
+               <font>
+                  <Font name="Rustico Regular" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="200.0" prefHeight="100.0" prefWidth="892.0">
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="159.0">
+            <children>
+               <Label fx:id="caloriesInfoLabelName" alignment="CENTER" prefHeight="61.0" prefWidth="159.0" styleClass="font" stylesheets="@../css/style.css" text="Label">
+                  <font>
+                     <Font name="Bauhaus" size="27.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="184.0">
+            <children>
+               <Label fx:id="caloriesInfoLabelCalories" alignment="CENTER" prefHeight="122.0" prefWidth="169.0" text="Label">
+                  <font>
+                     <Font name="Rustico Regular" size="27.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="181.0">
+            <children>
+               <Label fx:id="caloriesInfoLabelProteins" alignment="CENTER" prefHeight="153.0" prefWidth="170.0" text="Label">
+                  <font>
+                     <Font name="Rustico Regular" size="27.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="184.0">
+            <children>
+               <Label fx:id="caloriesInfoLabelFats" alignment="CENTER" prefHeight="116.0" prefWidth="191.0" text="Label">
+                  <font>
+                     <Font name="Rustico Regular" size="27.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="237.0">
+            <children>
+               <Label fx:id="caloriesInfoLabelCarbo" text="Label">
+                  <font>
+                     <Font name="Rustico Regular" size="27.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+      </HBox>
+   </children>
+</AnchorPane>
