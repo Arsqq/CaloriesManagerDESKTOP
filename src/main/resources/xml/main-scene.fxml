@@ -39,10 +39,10 @@
                </VBox.margin>
                <TextField fx:id="productTextField" prefHeight="45.0" prefWidth="269.0" promptText="Type here to calculate" styleClass="transp" stylesheets="@../css/style.css">
                   <font>
-                     <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     <Font name="Bauhaus" size="18.0" />
                   </font>
                </TextField>
-               <Button fx:id="calculatorButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" stylesheets="@../css/style.css" text="GO" textFill="WHITE">
+               <Button fx:id="calculatorButton" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="67.0" stylesheets="@../css/style.css" text="GO" textFill="WHITE">
                   <font>
                      <Font name="BRIPOKUS" size="18.0" />
                   </font>
@@ -111,7 +111,7 @@
                               <Font name="Rustico Regular" size="18.0" />
                            </font>
                         </Label>
-                        <Button fx:id="switchMode" alignment="BOTTOM_LEFT" blendMode="DARKEN" layoutX="578.0" layoutY="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="primary-color" textFill="#878787">
+                        <Button fx:id="switchMode" alignment="BOTTOM_LEFT" blendMode="DARKEN" layoutX="578.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleChangeModeButton" prefHeight="40.0" prefWidth="40.0" styleClass="primary-color" textFill="#878787">
                            <graphic>
                               <ImageView fx:id="imgView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

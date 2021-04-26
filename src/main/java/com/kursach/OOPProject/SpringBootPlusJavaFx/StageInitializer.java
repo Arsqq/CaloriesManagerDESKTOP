@@ -25,6 +25,11 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
     private final ApplicationContext springContext;
 
 
+    @Value("classpath:/xml/CaloriesCalculator.fxml")
+    private Resource sceneResourse2;
+
+
+
     private final String applicationTitle;
     Parent parent;
 
@@ -46,6 +51,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
             stage.setTitle(applicationTitle);
             stage.centerOnScreen();
             stage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
