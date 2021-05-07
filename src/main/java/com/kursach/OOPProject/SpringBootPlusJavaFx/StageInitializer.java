@@ -1,11 +1,9 @@
 package com.kursach.OOPProject.SpringBootPlusJavaFx;
 
-import com.kursach.OOPProject.repo.MilkProductsRepository;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import  com.kursach.OOPProject.SpringBootPlusJavaFx.JavaFxApplicationSupport.StageReadyEvent;
 import org.springframework.context.ApplicationContext;
@@ -25,7 +23,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
     private final ApplicationContext springContext;
 
 
-    @Value("classpath:/xml/CaloriesCalculator.fxml")
+    @Value("classpath:/xml/InfoWindowController.fxml")
     private Resource sceneResourse2;
 
 

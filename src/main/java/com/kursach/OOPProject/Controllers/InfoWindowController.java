@@ -2,18 +2,11 @@ package com.kursach.OOPProject.Controllers;
 
 
 
-import com.kursach.OOPProject.Services.CaloriesCalculatorService;
+import com.kursach.OOPProject.Services.MinorFunctionsService;
 import com.kursach.OOPProject.models.AllProducts;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -38,7 +31,7 @@ public class InfoWindowController {
     @Autowired
     private AllProducts allProducts;
     @Autowired
-    private  CaloriesCalculatorService calculatorService;
+    private MinorFunctionsService calculatorService;
     @Autowired
     private MainSceneController mainSceneController;
 
@@ -50,6 +43,11 @@ public class InfoWindowController {
     {
         allProducts=calculatorService.getProductInfo(mainSceneController.getProductTextField().getText());
         caloriesInfoLabelName.setText(allProducts.getAnyProductName());
+        caloriesInfoLabelCalories.setText(String.valueOf(allProducts.getCalories()));
+        caloriesInfoLabelCarbo.setText(String.valueOf(allProducts.getCarbohydrates()));
+        caloriesInfoLabelProteins.setText(String.valueOf(allProducts.getProteins()));
+        caloriesInfoLabelFats.setText(String.valueOf(allProducts.getFats()));
+
 
     }
 }

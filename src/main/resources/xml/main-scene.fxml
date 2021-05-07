@@ -37,7 +37,7 @@
                <VBox.margin>
                   <Insets left="30.0" right="30.0" />
                </VBox.margin>
-               <TextField fx:id="productTextField" prefHeight="45.0" prefWidth="269.0" promptText="Type here to calculate" styleClass="transp" stylesheets="@../css/style.css">
+               <TextField fx:id="productTextField" prefHeight="45.0" prefWidth="269.0" promptText="Type here to calculate" styleClass="transp">
                   <font>
                      <Font name="Bauhaus" size="18.0" />
                   </font>
@@ -56,7 +56,7 @@
                   <String fx:value="shadow" />
                </styleClass>
             </HBox>
-            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="460.0" prefWidth="335.0" styleClass="chosenFun" stylesheets="@../css/style.css">
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="543.0" prefWidth="370.0" styleClass="chosenFun" stylesheets="@../css/style.css">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" top="60.0" />
                </VBox.margin>
@@ -72,9 +72,6 @@
                      </Label>
                   </children>
                </HBox>
-               <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../Pictures/calculation-145-838760.png" />
-               </ImageView>
                <HBox prefHeight="100.0" prefWidth="362.0">
                   <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*Calculates your body mass index*">
                      <font>
@@ -82,11 +79,44 @@
                      </font>
                   </Label>
                </HBox>
-               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="310.0" styleClass="addBtn" stylesheets="@../css/style.css" text="EXECUTE">
-                  <font>
-                     <Font name="Rustico Regular" size="24.0" />
-                  </font>
-               </Button>
+               <HBox alignment="CENTER" prefHeight="88.0" prefWidth="331.0">
+                  <children>
+                     <AnchorPane prefHeight="127.0" prefWidth="254.0">
+                        <children>
+                           <TextField fx:id="weightTextField" alignment="CENTER" layoutX="191.0" layoutY="65.0" prefHeight="34.0" prefWidth="124.0" />
+                           <TextField fx:id="heightTextField" alignment="CENTER" layoutX="191.0" layoutY="20.0" prefHeight="34.0" prefWidth="124.0" />
+                           <Label layoutX="14.0" layoutY="15.0" text="HEIGHT">
+                              <font>
+                                 <Font name="Rustico Regular" size="19.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="10.0" layoutY="59.0" text="WEIGHT">
+                              <font>
+                                 <Font name="Rustico Regular" size="20.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="98.0" prefWidth="352.0">
+                  <children>
+                     <ImageView fitHeight="157.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../Pictures/calculation-145-838760.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </HBox>
+               <AnchorPane prefHeight="134.0" prefWidth="351.0">
+                  <children>
+                     <Button fx:id="bodyMassIndexButton" alignment="CENTER" layoutX="49.0" layoutY="23.0" mnemonicParsing="false" onAction="#setBodyMassLabels" prefHeight="49.0" prefWidth="234.0" styleClass="addBtn" stylesheets="@../css/style.css" text="EXECUTE">
+                        <font>
+                           <Font name="Rustico Regular" size="24.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </AnchorPane>
             </VBox>
          </VBox>
       </left>
@@ -144,16 +174,16 @@
                         </font>
                      </Label>
                   </VBox>
-                  <Button fx:id="cartButton" alignment="CENTER" blendMode="DARKEN" mnemonicParsing="false" prefHeight="70.0" prefWidth="85.0" textFill="#878787">
+                  <Button fx:id="cartButton" alignment="CENTER" blendMode="DARKEN" mnemonicParsing="false" onAction="#handleCartButton" prefHeight="70.0" prefWidth="85.0" textFill="#878787">
+                     <styleClass>
+                        <String fx:value="round-border" />
+                        <String fx:value="primary-color" />
+                     </styleClass>
                      <graphic>
                         <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                            <Image url="@../Pictures/istockphoto-1206806317-612x612.jpg" />
                         </ImageView>
                      </graphic>
-                     <styleClass>
-                        <String fx:value="round-border" />
-                        <String fx:value="primary-color" />
-                     </styleClass>
                   </Button>
                </HBox>
                <Pane prefHeight="128.0" prefWidth="111.0" />
@@ -222,7 +252,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #faac0f;">
+                              <Button fx:id="randomButton" mnemonicParsing="false" onAction="#getRandomDish" style="-fx-background-color: #faac0f;">
                                  <graphic>
                                     <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="chosenFun">
                                        <image>
@@ -260,7 +290,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #d0e0ad;">
+                              <Button mnemonicParsing="false" onAction="#handleDiaryButton" style="-fx-background-color: #d0e0ad;">
                                  <graphic>
                                     <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

@@ -1,16 +1,17 @@
 package com.kursach.OOPProject.Controllers;
 
-import com.kursach.OOPProject.Services.CaloriesCalculatorService;
+import com.kursach.OOPProject.Services.MajorFunctionsService;
+import com.kursach.OOPProject.Services.MinorFunctionsService;
 import com.kursach.OOPProject.models.AllProducts;
 import com.kursach.OOPProject.models.CustomersProducts;
+import com.kursach.OOPProject.models.Dishes;
+import com.kursach.OOPProject.repo.DishesRepository;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -24,10 +25,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Component
 public class MainSceneController
@@ -37,7 +35,7 @@ public class MainSceneController
 
 
     @Autowired
-    CaloriesCalculatorService calculatorService;
+    MinorFunctionsService calculatorService;
 
 
     public TextField getProductTextField() {
@@ -49,8 +47,6 @@ public class MainSceneController
 
     @FXML
     private Button cartButton;
-
-
 
     @FXML
     private Label modeLabel;
@@ -75,26 +71,20 @@ public class MainSceneController
     @FXML
     private VBox rightVbox;
 
+    @FXML
+    private Button bodyMassIndexButton;
 
     @FXML
     private ImageView imgView;
 
     @FXML
-    private Label caloriesInfoLabelName;
+    private TextField weightTextField;
 
     @FXML
-    private Label caloriesInfoLabelCalories;
+    private TextField heightTextField;
 
     @FXML
-    private Label caloriesInfoLabelProteins;
-
-    @FXML
-    private Label caloriesInfoLabelFats;
-
-
-    @FXML
-    private Label caloriesInfoLabelCarbo;
-
+    private Button randomButton;
 
     private boolean isLightMode=true;
 
@@ -149,14 +139,13 @@ public class MainSceneController
         @Autowired
         AllProducts allProducts;
 
-        @Value("classpath:/xml/CaloriesCalculator.fxml")
+        @Value("classpath:/xml/InfoWindowController.fxml")
         private Resource sceneResourse;
         @FXML
         void handleButtonAction(ActionEvent event)
         {
             try
             {
-                String buffer=productTextField.getText();
                 FXMLLoader loader=new FXMLLoader(sceneResourse.getURL());
                 loader.setControllerFactory(springContext::getBean);
                 Parent root=loader.load();
@@ -169,13 +158,51 @@ public class MainSceneController
             }
         }
 
-   /*
-        public AllProducts getProductInfo()
+        @Value("classpath:/xml/cartTextArea.fxml")
+        private Resource sceneResourseForCart;
+        @FXML
+        void handleCartButton(ActionEvent event)
         {
-           allProducts=calculatorService.getProductInfo(productTextField);
-           return allProducts;
+            try
+            {
+                FXMLLoader loader=new FXMLLoader(sceneResourseForCart.getURL());
+                loader.setControllerFactory(springContext::getBean);
+                Parent root=loader.load();
+                Stage stage = new Stage();
+                Scene scene=new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-    */
+
+    @Value("classpath:/xml/CaloriesDiary.fxml")
+    private Resource sceneResourseForDiary;
+    @FXML
+    void handleDiaryButton(ActionEvent event)
+    {
+        try
+        {
+            FXMLLoader loader=new FXMLLoader(sceneResourseForDiary.getURL());
+            loader.setControllerFactory(springContext::getBean);
+            Parent root=loader.load();
+            Stage stage = new Stage();
+            Scene scene=new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
+
         @FXML
         void handleChangeModeButton(ActionEvent event)
         {
@@ -183,6 +210,30 @@ public class MainSceneController
             changeMode();
         }
 
+
+        public void setBodyMassLabels()
+        {
+            Alert alert=new Alert(Alert.AlertType.NONE,"BMI ="+calculatorService.bmiCalculation(weightTextField.getText(),heightTextField.getText()), ButtonType.APPLY);
+            alert.show();
+        }
+
+        @Autowired
+        Optional<Dishes> dishes;
+
+        @Autowired
+        CartTextAreaController cartTextAreaController;
+
+        @Autowired
+         DishesRepository dishesRepository;
+
+        @Autowired
+        MajorFunctionsService majorFunctionsService;
+
+         public void getRandomDish()
+         {
+             dishes=calculatorService.getRandomDish();
+             System.out.println(dishes.get().getDishName());
+         }
 
 
 
