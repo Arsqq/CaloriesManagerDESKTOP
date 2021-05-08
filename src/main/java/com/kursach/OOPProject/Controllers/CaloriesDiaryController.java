@@ -1,5 +1,6 @@
 package com.kursach.OOPProject.Controllers;
 
+import com.jfoenix.controls.JFXTextArea;
 import com.kursach.OOPProject.Services.MajorFunctionsService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,7 +13,7 @@ public class CaloriesDiaryController
 {
 
     @FXML
-    private TextArea caloriesDiaryTextArea;
+    private JFXTextArea caloriesDiaryTextArea;
 
     @FXML
     private Button caloriesDiaryButton;
@@ -24,8 +25,8 @@ public class CaloriesDiaryController
    public void displayCaloriesPerDay()
    {
 
-       var value= majorFunctionsService.getAmountOfCalories(caloriesDiaryTextArea);
-       System.out.println(value);
+     var value= majorFunctionsService.getAmountOfCalories(caloriesDiaryTextArea);
+      System.out.println(value);
    }
 
 

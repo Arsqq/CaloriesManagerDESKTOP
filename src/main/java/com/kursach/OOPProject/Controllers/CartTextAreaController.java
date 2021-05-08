@@ -1,5 +1,6 @@
 package com.kursach.OOPProject.Controllers;
 
+import com.jfoenix.controls.JFXTextArea;
 import com.kursach.OOPProject.Services.MinorFunctionsService;
 import com.kursach.OOPProject.models.AllProducts;
 import javafx.fxml.FXML;
@@ -7,6 +8,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextArea;
+import javafx.stage.Popup;
+import org.fxmisc.richtext.GenericStyledArea;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,8 +28,9 @@ public class CartTextAreaController {
 
 
 
+
     @FXML
-    private TextArea productTextArea;
+    private JFXTextArea productTextArea;
 
     @FXML
     private Button textAreaButton;
@@ -44,10 +48,6 @@ public class CartTextAreaController {
         {
             listOfCustomersProducts.add(calculatorService.getProductInfo(productName));
         }
-        listOfCustomersProducts.forEach(System.out::println);
-
-        Alert alert=new Alert(Alert.AlertType.NONE,"YOUR CART WAS FILLED", ButtonType.APPLY);
-        alert.show();
         return listOfCustomersProducts;
 
 
@@ -55,6 +55,12 @@ public class CartTextAreaController {
     }
     @FXML
     void initialize() {
+
+        Alert alert=new Alert(Alert.AlertType.NONE,"YOUR CART WAS FILLED", ButtonType.APPLY);
+        textAreaButton.setOnAction(b->alert.show());
+
+
+
 
     }
 }

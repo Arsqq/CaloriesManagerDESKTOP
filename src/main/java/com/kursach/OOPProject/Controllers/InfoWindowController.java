@@ -47,7 +47,5 @@ public class InfoWindowController {
         caloriesInfoLabelCarbo.setText(String.valueOf(allProducts.getCarbohydrates()));
         caloriesInfoLabelProteins.setText(String.valueOf(allProducts.getProteins()));
         caloriesInfoLabelFats.setText(String.valueOf(allProducts.getFats()));
-
-
     }
 }

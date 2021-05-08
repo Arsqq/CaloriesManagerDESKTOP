@@ -6,7 +6,6 @@ import com.kursach.OOPProject.models.AllProducts;
 import com.kursach.OOPProject.models.CustomersProducts;
 import com.kursach.OOPProject.models.Dishes;
 import com.kursach.OOPProject.repo.DishesRepository;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,7 +30,6 @@ import java.util.*;
 public class MainSceneController
 {
     List<Label> listOfLabels=new ArrayList<>();
-    List<CustomersProducts> listOfProducts=new ArrayList<>();
 
 
     @Autowired
@@ -45,8 +43,6 @@ public class MainSceneController
     @FXML
     private TextField productTextField;
 
-    @FXML
-    private Button cartButton;
 
     @FXML
     private Label modeLabel;
@@ -71,8 +67,6 @@ public class MainSceneController
     @FXML
     private VBox rightVbox;
 
-    @FXML
-    private Button bodyMassIndexButton;
 
     @FXML
     private ImageView imgView;
@@ -83,8 +77,6 @@ public class MainSceneController
     @FXML
     private TextField heightTextField;
 
-    @FXML
-    private Button randomButton;
 
     private boolean isLightMode=true;
 
@@ -142,54 +134,52 @@ public class MainSceneController
         @Value("classpath:/xml/InfoWindowController.fxml")
         private Resource sceneResourse;
         @FXML
-        void handleButtonAction(ActionEvent event)
+        void handleButtonAction()
         {
-            try
-            {
-                FXMLLoader loader=new FXMLLoader(sceneResourse.getURL());
-                loader.setControllerFactory(springContext::getBean);
-                Parent root=loader.load();
-                Stage stage = new Stage();
-                Scene scene=new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+           generateFXML(sceneResourse);
         }
 
         @Value("classpath:/xml/cartTextArea.fxml")
         private Resource sceneResourseForCart;
         @FXML
-        void handleCartButton(ActionEvent event)
+        void handleCartButton()
         {
-            try
-            {
-                FXMLLoader loader=new FXMLLoader(sceneResourseForCart.getURL());
-                loader.setControllerFactory(springContext::getBean);
-                Parent root=loader.load();
-                Stage stage = new Stage();
-                Scene scene=new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+           generateFXML(sceneResourseForCart);
         }
 
     @Value("classpath:/xml/CaloriesDiary.fxml")
     private Resource sceneResourseForDiary;
     @FXML
-    void handleDiaryButton(ActionEvent event)
+    void handleDiaryButton()
     {
-        try
-        {
-            FXMLLoader loader=new FXMLLoader(sceneResourseForDiary.getURL());
+      generateFXML(sceneResourseForDiary);
+    }
+
+    @Value("classpath:/xml/DailyCaloriesIntake.fxml")
+    private Resource sceneResourceForIntake;
+
+    @FXML
+    void handleIntakeButton()
+    {
+        generateFXML(sceneResourceForIntake);
+    }
+
+
+    @Value("classpath:/xml/CaloriesNorm.fxml")
+    private Resource sceneResourseForCaloriesNorm;
+    @FXML
+    void handleCaloriesNormButton()
+    {
+       generateFXML(sceneResourseForCaloriesNorm);
+    }
+
+    private void generateFXML(Resource sceneResource) {
+        try {
+            FXMLLoader loader = new FXMLLoader(sceneResource.getURL());
             loader.setControllerFactory(springContext::getBean);
-            Parent root=loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-            Scene scene=new Scene(root);
+            Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
 
@@ -199,12 +189,8 @@ public class MainSceneController
     }
 
 
-
-
-
-
-        @FXML
-        void handleChangeModeButton(ActionEvent event)
+    @FXML
+        void handleChangeModeButton()
         {
             Collections.addAll(listOfLabels,modeLabel,lightLabel,themeLabel,caloriesLabel,managerLabel,quoteLabel);
             changeMode();

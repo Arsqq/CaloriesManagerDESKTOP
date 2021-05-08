@@ -170,7 +170,7 @@
                      </Label>
                      <Label fx:id="groceriesLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="with groceries you have" textFill="#858585">
                         <font>
-                           <Font name="Cambria Italic" size="20.0" />
+                           <Font name="Cambria Italic" size="17.0" />
                         </font>
                      </Label>
                   </VBox>
@@ -189,16 +189,16 @@
                <Pane prefHeight="128.0" prefWidth="111.0" />
                <HBox prefHeight="113.0" prefWidth="428.0" stylesheets="@../css/style.css">
                   <children>
-                     <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="308.0" stylesheets="@../css/style.css">
+                     <VBox alignment="TOP_CENTER" prefHeight="98.0" prefWidth="260.0" stylesheets="@../css/style.css">
                         <children>
-                           <Label fx:id="planLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="Plan a healthy diet" textFill="#858585">
+                           <Label fx:id="planLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="daily calorie intake" textFill="#858585">
                               <font>
                                  <Font name="Cambria Bold" size="20.0" />
                               </font>
                            </Label>
-                           <Label fx:id="dietNumLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="there are three types!" textFill="#858585">
+                           <Label fx:id="dietNumLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="*amount of calories per day*" textFill="#858585">
                               <font>
-                                 <Font name="Cambria Italic" size="20.0" />
+                                 <Font name="Cambria Italic" size="17.0" />
                               </font>
                            </Label>
                         </children>
@@ -206,7 +206,7 @@
                            <Insets left="20.0" right="20.0" top="10.0" />
                         </HBox.margin>
                      </VBox>
-                     <Button fx:id="dietButton" alignment="BOTTOM_LEFT" blendMode="DARKEN" mnemonicParsing="false" prefHeight="34.0" prefWidth="0.0" textFill="#878787">
+                     <Button fx:id="intakeButton" alignment="BOTTOM_LEFT" blendMode="DARKEN" mnemonicParsing="false" onAction="#handleIntakeButton" prefHeight="34.0" prefWidth="0.0" textFill="#878787">
                         <graphic>
                            <ImageView fitHeight="100.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
                               <image>
@@ -290,7 +290,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button mnemonicParsing="false" onAction="#handleDiaryButton" style="-fx-background-color: #d0e0ad;">
+                              <Button mnemonicParsing="false" onAction="#handleCaloriesNormButton" style="-fx-background-color: #d0e0ad;">
                                  <graphic>
                                     <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -301,7 +301,7 @@
                               </Button>
                               <HBox prefHeight="100.0" prefWidth="362.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*select meal time*">
+                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*calories per mealtimes*">
                                        <font>
                                           <Font name="Cambria Italic" size="22.0" />
                                        </font>
@@ -324,7 +324,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #b0fa0f;">
+                              <Button mnemonicParsing="false" onAction="#handleDiaryButton" style="-fx-background-color: #b0fa0f;">
                                  <graphic>
                                     <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

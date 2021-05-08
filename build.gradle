@@ -24,6 +24,8 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+	compile group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.6'
+	compile 'com.jfoenix:jfoenix:9.0.10'
 
 }
 
