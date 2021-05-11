@@ -1,27 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDialog?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.DailyCaloriesIntakeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="456.0" style="-fx-background-color: #98cbd6;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.DailyCaloriesIntakeController">
    <children>
-      <TextField fx:id="heightTextFiield" layoutY="27.0" prefHeight="37.0" prefWidth="149.0" />
+      <TextField fx:id="heightTextFiield" layoutY="40.0" prefHeight="37.0" prefWidth="149.0" stylesheets="@../css/style.css" />
       <TextField fx:id="weightTextField" layoutY="113.0" prefHeight="37.0" prefWidth="149.0" />
-      <TextField fx:id="ageTextField" layoutY="214.0" prefHeight="37.0" prefWidth="149.0" />
-      <Button fx:id="intakeButton" layoutX="202.0" layoutY="287.0" mnemonicParsing="false" text="Go!" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="6.0" prefHeight="17.0" prefWidth="150.0" text="Height" />
+      <TextField fx:id="ageTextField" layoutY="186.0" prefHeight="37.0" prefWidth="149.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="2.0" prefHeight="17.0" prefWidth="150.0" text="Height">
+         <font>
+            <Font name="Rustico Regular" size="19.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4222222222222222" centerY="0.35238095238095235" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6447368264198303" green="0.4149000942707062" blue="0.4149000942707062" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22575536370277405" green="0.44736841320991516" blue="0.2368360161781311" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
       <Label layoutX="-279.0" layoutY="-200.0" text="Label" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="96.0" prefHeight="17.0" prefWidth="150.0" text="Weight" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="197.0" prefHeight="17.0" prefWidth="150.0" text="Age" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="303.0" layoutY="15.0" prefHeight="17.0" prefWidth="150.0" text="Activity Level" />
-      <JFXComboBox fx:id="activityBox" focusColor="#2e4dab" layoutX="311.0" layoutY="46.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="#eb9696" />
-      <JFXCheckBox fx:id="maleBox" layoutX="368.0" layoutY="260.0" text="Male Box" />
-      <JFXCheckBox fx:id="femaleBox" layoutX="368.0" layoutY="291.0" text="Female Box" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="77.0" prefHeight="17.0" prefWidth="150.0" text="Weight">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4222222222222222" centerY="0.35238095238095235" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6447368264198303" green="0.4149000942707062" blue="0.4149000942707062" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22575536370277405" green="0.44736841320991516" blue="0.2368360161781311" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="150.0" prefHeight="17.0" prefWidth="150.0" text="Age">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4222222222222222" centerY="0.35238095238095235" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6447368264198303" green="0.4149000942707062" blue="0.4149000942707062" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22575536370277405" green="0.44736841320991516" blue="0.2368360161781311" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="303.0" layoutY="14.0" prefHeight="17.0" prefWidth="150.0" text="Activity Level">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.6611111111111111" centerY="0.35238095238095235" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6447368264198303" green="0.4149000942707062" blue="0.4149000942707062" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5526315569877625" green="0.36330410838127136" blue="0.36330410838127136" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <JFXComboBox fx:id="activityBox" focusColor="#2e4dab" layoutX="311.0" layoutY="46.0" prefHeight="25.0" prefWidth="134.0" stylesheets="@../css/style.css" unFocusColor="#eb9696" />
+      <JFXCheckBox fx:id="maleBox" layoutX="369.0" layoutY="276.0" text="Male ">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4222222222222222" centerY="0.35238095238095235" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6447368264198303" green="0.4149000942707062" blue="0.4149000942707062" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22575536370277405" green="0.44736841320991516" blue="0.2368360161781311" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></JFXCheckBox>
+      <JFXCheckBox fx:id="femaleBox" layoutX="369.0" layoutY="243.0" text="Female">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.6" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4029483497142792" green="0.6052631735801697" blue="0.2858187258243561" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="0.4029483497142792" green="0.6052631735801697" blue="0.2858187258243561" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8157894611358643" green="0.6526315808296204" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></JFXCheckBox>
       <JFXDialog layoutX="579.0" layoutY="1.0" prefWidth="109.0" />
+      <JFXButton fx:id="intakeButton" buttonType="RAISED" layoutX="185.0" layoutY="264.0" prefHeight="37.0" prefWidth="86.0" ripplerFill="#e44646" text="GO" textFill="#433232">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="intakeLabel" layoutX="1.0" layoutY="270.0" text="Label">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6447368264198303" green="0.4149000942707062" blue="0.4149000942707062" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22575536370277405" green="0.44736841320991516" blue="0.2368360161781311" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="1.0" layoutY="243.0" prefHeight="42.0" prefWidth="176.0" text="Amount OF Calories">
+         <font>
+            <Font name="Rustico Regular" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4222222222222222" centerY="0.35238095238095235" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6447368264198303" green="0.4149000942707062" blue="0.4149000942707062" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.22575536370277405" green="0.44736841320991516" blue="0.2368360161781311" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

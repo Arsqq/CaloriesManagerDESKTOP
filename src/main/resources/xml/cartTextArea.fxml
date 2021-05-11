@@ -11,13 +11,8 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.CartTextAreaController">
-   <JFXButton fx:id="textAreaButton" layoutX="243.0" layoutY="367.0" onAction="#getCustomersProducts" prefHeight="42.0" prefWidth="122.0" ripplerFill="#d03b3b" text="SAVE">
-      <font>
-         <Font name="Rustico Regular" size="18.0" />
-      </font>
-   </JFXButton>
-   <Separator layoutX="298.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="0.0" styleClass="right-bar" stylesheets="@../css/style.css" />
-   <VBox prefHeight="370.0" prefWidth="302.0">
+   <Separator layoutX="298.0" orientation="VERTICAL" prefHeight="430.0" prefWidth="1.0" styleClass="right-bar" stylesheets="@../css/style.css" />
+   <VBox prefHeight="370.0" prefWidth="295.0">
       <children>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
@@ -49,7 +44,7 @@
                </Label>
             </children>
          </HBox>
-         <JFXTextArea prefHeight="388.0" prefWidth="268.0" text="&#10;" unFocusColor="#e13d3d">
+         <JFXTextArea fx:id="dishTextArea" prefHeight="388.0" prefWidth="268.0" text="&#10;" unFocusColor="#e13d3d">
             <font>
                <Font name="Cambria" size="20.0" />
             </font>
@@ -58,4 +53,14 @@
             </VBox.margin></JFXTextArea>
       </children>
    </VBox>
+   <JFXButton fx:id="textAreaButtonForDishes" layoutX="387.0" layoutY="376.0" onAction="#getCustomersDishes" prefHeight="42.0" prefWidth="122.0" ripplerFill="#d03b3b" text="SAVE">
+      <font>
+         <Font name="Rustico Regular" size="18.0" />
+      </font>
+   </JFXButton>
+   <JFXButton fx:id="textAreaButton" layoutX="91.0" layoutY="376.0" onAction="#getCustomersProducts" prefHeight="42.0" prefWidth="122.0" ripplerFill="#d03b3b" text="SAVE">
+      <font>
+         <Font name="Rustico Regular" size="18.0" />
+      </font>
+   </JFXButton>
 </AnchorPane>

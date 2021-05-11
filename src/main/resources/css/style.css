@@ -71,3 +71,15 @@
     -fx-background-color: #50d4c4;
 }
 
+.myDialog{
+    -fx-background-color: #f9d900;
+}
+.text-area{
+    -fx-text-fill:#fbff00 ;
+}
+
+.forImage
+{
+    -fx-background-color: #e0de9d  ;
+    -fx-background-radius: 30;
+}

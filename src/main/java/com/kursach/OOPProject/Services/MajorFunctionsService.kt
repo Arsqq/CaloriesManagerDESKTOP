@@ -1,20 +1,18 @@
 package com.kursach.OOPProject.Services
 
-import com.jfoenix.controls.JFXTextArea
 import com.kursach.OOPProject.Controllers.DailyCaloriesIntakeController
 import com.kursach.OOPProject.models.AllProducts
-import javafx.scene.control.CheckBox
-import javafx.scene.control.ComboBox
-import javafx.scene.control.TextArea
-import javafx.scene.control.TextField
+import com.kursach.OOPProject.models.Dishes
+import com.kursach.OOPProject.repo.AllProductsRepository
+import com.kursach.OOPProject.repo.DishesRepository
+import javafx.scene.control.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import java.util.*
+
 
 @Service
 class MajorFunctionsService {
-    private val listOfProducts: MutableList<AllProducts> = ArrayList()
-    private val listForCaloriesSum: MutableList<String> = ArrayList()
+
 
     @Autowired
     lateinit var minorFunctionsService: MinorFunctionsService
@@ -22,24 +20,59 @@ class MajorFunctionsService {
     @Autowired
     lateinit var dailyCaloriesIntakeController: DailyCaloriesIntakeController
 
-    fun getAmountOfCalories(textArea: TextArea): Double {
-        var sum = 0.0
-        val buffer = textArea.text
-        val splits = (buffer.split("\n"))
-        listForCaloriesSum.addAll(splits)
-        for (productName in listForCaloriesSum) {
+    @Autowired
+    lateinit var dishesRepository:DishesRepository
 
-            listOfProducts.add(minorFunctionsService.getProductInfo(productName))
+    @Autowired
+    lateinit var allProductsRepository: AllProductsRepository
+
+    fun getAmountOfCalories(textArea: TextArea): Double?
+    {
+        try {
+            var sum:Double=0.0
+            var productsSum=0.0
+            var dishesSum=0.0
+            val listOfDishes: MutableList<Dishes> = ArrayList()
+            val listOfDishesForCaloriesSum: MutableList<String> = ArrayList()
+
+            val listOfProducts: MutableList<AllProducts> = ArrayList()
+            val listForCaloriesSum: MutableList<String> = ArrayList()
+
+            val buffer = textArea.text
+            val splits = (buffer.split("\n"))
+            listForCaloriesSum.addAll(splits)
+            for (productName in listForCaloriesSum) {
+                if(allProductsRepository.existsByAnyProductName(productName))
+                {
+                    listOfProducts.add(minorFunctionsService.getProductInfo(productName))
+                }
+                if(dishesRepository.existsByDishName(productName))
+                {
+                    listOfDishes.add(minorFunctionsService.getDishInfo(productName))
+                }
+            }
+            for (dish in listOfDishes) {
+                dishesSum += dish.calories
+            }
+            for (product in listOfProducts) {
+                productsSum += product.calories
+            }
+
+            sum=dishesSum+productsSum
+            return sum
         }
 
-        for (product in listOfProducts) {
-            sum += product.calories
+        catch (exc:NullPointerException)
+        {
+            val alert = Alert(Alert.AlertType.ERROR)
+            alert.title = "Error Alert"
+            alert.headerText = null
+            alert.contentText = "ERROR.Sum can't be calculated due to incorrect input.Try again"
+            alert.show()
+            return null
+
         }
 
-        listOfProducts.clear()
-        listForCaloriesSum.clear()
-
-        return sum
     }
 
     fun getDailyIntake(

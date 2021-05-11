@@ -17,6 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
@@ -29,6 +30,7 @@ import java.util.*;
 @Component
 public class MainSceneController
 {
+
     List<Label> listOfLabels=new ArrayList<>();
 
 
@@ -77,6 +79,31 @@ public class MainSceneController
     @FXML
     private TextField heightTextField;
 
+    @FXML
+    private Label heightLabel;
+
+    @FXML
+    private Label weightLabel;
+
+    @FXML
+    private Label randomTextLabel;
+
+    @FXML
+    private Label caloriesNormLabel;
+
+    @FXML
+    private Label normText;
+
+    @FXML
+    private Label caloriesDiaryLabel;
+
+    @FXML
+    private Label sumText;
+
+    @FXML
+    private Label randomizerLabel;
+    @FXML
+    private Label countLabel;
 
     private boolean isLightMode=true;
 
@@ -173,6 +200,19 @@ public class MainSceneController
        generateFXML(sceneResourseForCaloriesNorm);
     }
 
+    @Value("classpath:/xml/RandomDish.fxml")
+    private Resource sceneResourseForRandomDish;
+
+    @Autowired
+    RandomDishController randomDishController;
+
+    @FXML
+    void handleRandomButton()
+    {
+        generateFXML(sceneResourseForRandomDish);
+        randomDishController.setRandomImage(randomDishController.getImage());
+    }
+
     private void generateFXML(Resource sceneResource) {
         try {
             FXMLLoader loader = new FXMLLoader(sceneResource.getURL());
@@ -182,6 +222,7 @@ public class MainSceneController
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+            stage.setResizable(false);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -192,15 +233,28 @@ public class MainSceneController
     @FXML
         void handleChangeModeButton()
         {
-            Collections.addAll(listOfLabels,modeLabel,lightLabel,themeLabel,caloriesLabel,managerLabel,quoteLabel);
+            Collections.addAll(listOfLabels,modeLabel,lightLabel,themeLabel,caloriesLabel,managerLabel,quoteLabel
+                   ,heightLabel,weightLabel,countLabel);
             changeMode();
         }
 
 
         public void setBodyMassLabels()
         {
-            Alert alert=new Alert(Alert.AlertType.NONE,"BMI ="+calculatorService.bmiCalculation(weightTextField.getText(),heightTextField.getText()), ButtonType.APPLY);
-            alert.show();
+            try
+            {
+                Alert alert=new Alert(Alert.AlertType.INFORMATION,"BMI ="+calculatorService.bmiCalculation(weightTextField.getText(),heightTextField.getText()), ButtonType.APPLY);
+                alert.show();
+            }
+            catch (NumberFormatException num)
+            {
+                val alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error Alert");
+                alert.setHeaderText(null);
+                alert.setContentText("ERROR.BMI can't be calculated due to incorrect input.Try again");
+                alert.show();
+            }
+
         }
 
         @Autowired
@@ -215,11 +269,7 @@ public class MainSceneController
         @Autowired
         MajorFunctionsService majorFunctionsService;
 
-         public void getRandomDish()
-         {
-             dishes=calculatorService.getRandomDish();
-             System.out.println(dishes.get().getDishName());
-         }
+
 
 
 

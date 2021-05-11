@@ -5,6 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface AllProductsRepository extends CrudRepository<AllProducts,Long>
 {
-    AllProducts findByAnyProductName(String anyProductName);
+    AllProducts findByAnyProductNameIgnoreCase(String anyProductName);
     AllProducts findByCalories(Double calories);
+    Boolean existsByAnyProductName(String name);
 }

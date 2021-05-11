@@ -1,5 +1,6 @@
 package com.kursach.OOPProject.repo;
 
+import com.kursach.OOPProject.models.AllProducts;
 import com.kursach.OOPProject.models.CerealProducts;
 import com.kursach.OOPProject.models.Dishes;
 import org.springframework.data.repository.CrudRepository;
@@ -11,6 +12,8 @@ import java.util.List;
 @Repository
 public interface DishesRepository extends CrudRepository<Dishes,Long>
 {
-    Dishes findByDishName(String dishName);
+    Dishes findByDishNameIgnoreCase(String dishName);
     List<Dishes> findAllByCompositionContaining(String elementOfComposition);
+    Dishes findByCalories(Double calories);
+    Boolean existsByDishName(String name);
 }

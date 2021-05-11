@@ -1,24 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="437.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.CaloriesDiaryController">
-   <Button fx:id="caloriesDiaryButton" layoutX="127.0" layoutY="404.0" mnemonicParsing="false" onAction="#displayCaloriesPerDay" text="Button" />
-   <HBox alignment="CENTER" layoutX="4.0" prefHeight="100.0" prefWidth="288.0">
+<AnchorPane prefHeight="449.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.CaloriesDiaryController">
+   <HBox alignment="CENTER" layoutX="3.0" layoutY="2.0" prefHeight="100.0" prefWidth="363.0">
       <children>
-         <Label text="Summ your calories">
+         <Label alignment="CENTER" prefHeight="122.0" prefWidth="379.0" text="Sum your calories">
             <font>
-               <Font name="Rustico Regular" size="20.0" />
+               <Font name="Rustico Regular" size="25.0" />
             </font>
+            <effect>
+               <InnerShadow>
+                  <color>
+                     <Color red="0.6578947305679321" green="0.23757310211658478" blue="0.23757310211658478" />
+                  </color>
+               </InnerShadow>
+            </effect>
          </Label>
       </children>
    </HBox>
-   <Separator layoutX="-6.0" layoutY="99.0" prefHeight="3.0" prefWidth="312.0" />
-   <JFXTextArea fx:id="caloriesDiaryTextArea" layoutY="100.0" prefHeight="295.0" prefWidth="301.0" />
+   <Separator layoutX="-6.0" layoutY="99.0" prefHeight="3.0" prefWidth="376.0" />
+   <JFXTextArea fx:id="caloriesDiaryTextArea" layoutY="100.0" prefHeight="294.0" prefWidth="370.0">
+      <font>
+         <Font name="Cambria" size="25.0" />
+      </font></JFXTextArea>
+   <JFXButton fx:id="caloriesDiaryButton" alignment="CENTER" buttonType="RAISED" layoutX="3.0" layoutY="394.0" onAction="#displayCaloriesPerDay" stylesheets="@../css/style.css" text="Calculate">
+      <font>
+         <Font name="Rustico Regular" size="20.0" />
+      </font>
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.7763158082962036" green="0.2120492160320282" blue="0.2120492160320282" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.9868420958518982" green="0.4888523519039154" blue="0.4888523519039154" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+      <ripplerFill>
+         <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.8823529481887817" green="0.2549019753932953" blue="0.2549019753932953" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </ripplerFill>
+   </JFXButton>
+   <Label layoutX="266.0" layoutY="399.0" prefHeight="49.0" prefWidth="48.0" text="Sum:">
+      <font>
+         <Font name="Rustico Regular" size="20.0" />
+      </font>
+      <textFill>
+         <RadialGradient centerX="0.5111111111111111" centerY="0.861904761904762" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.8823529481887817" green="0.2549019753932953" blue="0.2549019753932953" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </textFill>
+   </Label>
+   <Label fx:id="sumLabel" layoutX="314.0" layoutY="401.0" prefHeight="42.0" prefWidth="42.0" text=". . . . .">
+      <font>
+         <Font name="Rustico Regular" size="18.0" />
+      </font>
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.2514619827270508" green="0.5657894611358643" blue="0.30908870697021484" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
 </AnchorPane>

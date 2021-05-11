@@ -1,9 +1,11 @@
 package com.kursach.OOPProject.Controllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import com.kursach.OOPProject.Services.MajorFunctionsService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +18,10 @@ public class CaloriesDiaryController
     private JFXTextArea caloriesDiaryTextArea;
 
     @FXML
-    private Button caloriesDiaryButton;
+    private JFXButton caloriesDiaryButton;
+
+    @FXML
+    private Label sumLabel;
 
     @Autowired
     MajorFunctionsService majorFunctionsService;
@@ -26,7 +31,7 @@ public class CaloriesDiaryController
    {
 
      var value= majorFunctionsService.getAmountOfCalories(caloriesDiaryTextArea);
-      System.out.println(value);
+      sumLabel.setText(String.valueOf(value));
    }
 
 

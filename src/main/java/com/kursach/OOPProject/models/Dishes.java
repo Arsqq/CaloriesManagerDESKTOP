@@ -20,4 +20,8 @@ public class Dishes
     private String dishName,composition;
     private double proteins,fats,carbohydrates,calories;
 
+    public double getCalories() {
+        return calories;
+    }
+
 }

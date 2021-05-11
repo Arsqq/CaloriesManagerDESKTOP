@@ -1,15 +1,13 @@
 package com.kursach.OOPProject.Controllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.kursach.OOPProject.Services.MajorFunctionsService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -37,8 +35,11 @@ public class DailyCaloriesIntakeController
     private JFXComboBox<String> activityBox;
 
     @FXML
-    private Button intakeButton;
+    private JFXButton intakeButton;
 
+
+    @FXML
+    private Label intakeLabel;
 
 
 
@@ -50,7 +51,7 @@ public class DailyCaloriesIntakeController
         activityBox.setValue("Low");
 
          intakeButton.setOnAction(b->
-                 System.out.println((majorFunctionsService.getDailyIntake(ageTextField,weightTextField,heightTextFiield,maleBox,femaleBox,activityBox))));
+                intakeLabel.setText(String.valueOf(((majorFunctionsService.getDailyIntake(ageTextField,weightTextField,heightTextFiield,maleBox,femaleBox,activityBox))))));
     }
 
 }

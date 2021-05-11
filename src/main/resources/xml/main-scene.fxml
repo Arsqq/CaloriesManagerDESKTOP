@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -42,15 +43,11 @@
                      <Font name="Bauhaus" size="18.0" />
                   </font>
                </TextField>
-               <Button fx:id="calculatorButton" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="67.0" stylesheets="@../css/style.css" text="GO" textFill="WHITE">
+               <JFXButton onAction="#handleButtonAction" prefHeight="45.0" prefWidth="71.0" ripplerFill="#dd4646" text="GO" textFill="#da4c4c">
                   <font>
-                     <Font name="BRIPOKUS" size="18.0" />
+                     <Font name="Rustico Regular" size="15.0" />
                   </font>
-                  <styleClass>
-                     <String fx:value="search-button" />
-                     <String fx:value="primary-color" />
-                  </styleClass>
-               </Button>
+               </JFXButton>
                <styleClass>
                   <String fx:value="search-box" />
                   <String fx:value="shadow" />
@@ -62,7 +59,7 @@
                </VBox.margin>
                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="452.0">
                   <children>
-                     <Label alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="BMI count">
+                     <Label fx:id="countLabel" alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="BMI count">
                         <font>
                            <Font name="Cambria Bold" size="36.0" />
                         </font>
@@ -85,12 +82,12 @@
                         <children>
                            <TextField fx:id="weightTextField" alignment="CENTER" layoutX="191.0" layoutY="65.0" prefHeight="34.0" prefWidth="124.0" />
                            <TextField fx:id="heightTextField" alignment="CENTER" layoutX="191.0" layoutY="20.0" prefHeight="34.0" prefWidth="124.0" />
-                           <Label layoutX="14.0" layoutY="15.0" text="HEIGHT">
+                           <Label fx:id="heightLabel" layoutX="14.0" layoutY="15.0" text="HEIGHT">
                               <font>
                                  <Font name="Rustico Regular" size="19.0" />
                               </font>
                            </Label>
-                           <Label layoutX="10.0" layoutY="59.0" text="WEIGHT">
+                           <Label fx:id="weightLabel" layoutX="10.0" layoutY="59.0" text="WEIGHT">
                               <font>
                                  <Font name="Rustico Regular" size="20.0" />
                               </font>
@@ -168,7 +165,7 @@
                            <Font name="Cambria Bold" size="20.0" />
                         </font>
                      </Label>
-                     <Label fx:id="groceriesLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="with groceries you have" textFill="#858585">
+                     <Label fx:id="groceriesLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="*with groceries you have*" textFill="#858585">
                         <font>
                            <Font name="Cambria Italic" size="17.0" />
                         </font>
@@ -242,7 +239,7 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="53.0" prefWidth="261.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="Randomizer">
+                                    <Label fx:id="randomizerLabel" alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="Randomizer">
                                        <font>
                                           <Font name="Cambria Bold" size="36.0" />
                                        </font>
@@ -252,7 +249,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button fx:id="randomButton" mnemonicParsing="false" onAction="#getRandomDish" style="-fx-background-color: #faac0f;">
+                              <Button fx:id="randomButton" mnemonicParsing="false" onAction="#handleRandomButton" style="-fx-background-color: #faac0f;">
                                  <graphic>
                                     <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true" styleClass="chosenFun">
                                        <image>
@@ -263,7 +260,7 @@
                               </Button>
                               <HBox prefHeight="100.0" prefWidth="362.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*get a random dish*">
+                                    <Label fx:id="randomTextLabel" alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*get a random dish*">
                                        <font>
                                           <Font name="Cambria Italic" size="22.0" />
                                        </font>
@@ -280,7 +277,7 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="452.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="46.0" prefWidth="266.0" text="CaloriesNorm">
+                                    <Label fx:id="caloriesNormLabel" alignment="CENTER" prefHeight="46.0" prefWidth="266.0" text="CaloriesNorm">
                                        <font>
                                           <Font name="Cambria Bold" size="36.0" />
                                        </font>
@@ -290,18 +287,15 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button mnemonicParsing="false" onAction="#handleCaloriesNormButton" style="-fx-background-color: #d0e0ad;">
-                                 <graphic>
-                                    <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Pictures/equipment_car-512.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
+                              <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Pictures/equipment_car-512.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#handleCaloriesNormButton" style="-fx-background-color: #d0e0ad;" />
                               <HBox prefHeight="100.0" prefWidth="362.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*calories per mealtimes*">
+                                    <Label fx:id="normText" alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*calories per mealtimes*">
                                        <font>
                                           <Font name="Cambria Italic" size="22.0" />
                                        </font>
@@ -314,7 +308,7 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="452.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="46.0" prefWidth="292.0" text="CaloriesDiary">
+                                    <Label fx:id="caloriesDiaryLabel" alignment="CENTER" prefHeight="46.0" prefWidth="292.0" text="CaloriesDiary">
                                        <font>
                                           <Font name="Cambria Bold" size="36.0" />
                                        </font>
@@ -335,7 +329,7 @@
                               </Button>
                               <HBox prefHeight="100.0" prefWidth="362.0">
                                  <children>
-                                    <Label alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*sum your calories for day*">
+                                    <Label fx:id="sumText" alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*sum your calories for day*">
                                        <font>
                                           <Font name="Cambria Italic" size="22.0" />
                                        </font>

@@ -49,6 +49,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
             stage.setTitle(applicationTitle);
             stage.centerOnScreen();
             stage.show();
+            stage.setResizable(false);
 
         } catch (IOException e) {
             e.printStackTrace();

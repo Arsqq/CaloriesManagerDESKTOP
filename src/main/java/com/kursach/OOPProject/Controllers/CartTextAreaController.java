@@ -1,8 +1,10 @@
 package com.kursach.OOPProject.Controllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import com.kursach.OOPProject.Services.MinorFunctionsService;
 import com.kursach.OOPProject.models.AllProducts;
+import com.kursach.OOPProject.models.Dishes;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -33,7 +35,13 @@ public class CartTextAreaController {
     private JFXTextArea productTextArea;
 
     @FXML
+    private JFXTextArea dishTextArea;
+
+    @FXML
     private Button textAreaButton;
+
+    @FXML
+    private JFXButton textAreaButtonForDishes;
 
     @FXML
     public List<AllProducts> getCustomersProducts()
@@ -49,15 +57,34 @@ public class CartTextAreaController {
             listOfCustomersProducts.add(calculatorService.getProductInfo(productName));
         }
         return listOfCustomersProducts;
-
-
-
     }
+    @FXML
+    public List<Dishes> getCustomersDishes()
+    {
+        List<Dishes> listOfCustomersDishes=new ArrayList<>();
+        List<String> listOfDishesLines=new ArrayList<>();
+        String buffer=dishTextArea.getText();
+        String[] splits=buffer.split("\n");
+        Collections.addAll(listOfDishesLines,splits);
+        for (String productName:listOfDishesLines)
+        {
+            listOfCustomersDishes.add(calculatorService.getDishInfo(productName));
+        }
+        return listOfCustomersDishes;
+    }
+
+
+
     @FXML
     void initialize() {
 
-        Alert alert=new Alert(Alert.AlertType.NONE,"YOUR CART WAS FILLED", ButtonType.APPLY);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Alert");
+        alert.setHeaderText(null);
+        alert.setContentText("Cart has been filled!");
         textAreaButton.setOnAction(b->alert.show());
+        textAreaButtonForDishes.setOnAction(b->alert.show());
+
 
 
 

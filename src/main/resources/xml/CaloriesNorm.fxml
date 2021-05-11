@@ -1,39 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="287.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.CaloriesNormController">
+<AnchorPane prefHeight="489.0" prefWidth="723.0" style="-fx-background-color: #397785; -fx-background-color: #808080;" styleClass="transp" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.CaloriesNormController">
    <children>
-      <HBox prefHeight="108.0" prefWidth="524.0">
+      <JFXTextArea fx:id="normTextArea" layoutY="300.0" prefHeight="175.0" prefWidth="731.0" styleClass="text-area" stylesheets="@../css/style.css" text="&#10;&#10;&#10;" unFocusColor="#c62424">
+         <font>
+            <Font name="Cambria" size="25.0" />
+         </font>
+         <focusColor>
+            <RadialGradient centerX="0.65" centerY="0.5571428571428572" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.13401558995246887" green="0.2649853825569153" blue="0.6578947305679321" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </focusColor>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </JFXTextArea>
+      <Button layoutX="-3.0" layoutY="81.0" mnemonicParsing="false" onAction="#getMorningCombination" prefHeight="189.0" prefWidth="271.0" styleClass="transp" stylesheets="@../css/style.css">
+         <graphic>
+            <ImageView fitHeight="187.0" fitWidth="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/360-3601614_breakfast-icon-png-breakfast-clipart-png-transparent-png.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </Button>
+      <Button layoutX="263.0" layoutY="85.0" mnemonicParsing="false" onAction="#getLunchCombination" prefHeight="0.0" prefWidth="227.0" styleClass="transp" stylesheets="@../css/style.css">
+         <graphic>
+            <ImageView fitHeight="187.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="10.0" right="15.0" />
+         </padding>
+      </Button>
+      <Button layoutX="455.0" layoutY="84.0" mnemonicParsing="false" onAction="#getDinnerCombination" prefHeight="189.0" prefWidth="268.0" styleClass="transp" stylesheets="@../css/style.css">
+         <graphic>
+            <ImageView fitHeight="187.0" fitWidth="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/5882071.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </Button>
+      <HBox alignment="CENTER" layoutX="-3.0" layoutY="-1.0" prefHeight="93.0" prefWidth="247.0">
          <children>
-            <Button fx:id="breakfastButton" mnemonicParsing="false" onAction="#getMorningCombination" prefHeight="108.0" prefWidth="525.0" style="-fx-background-color: #808080;" text="Breakfast">
+            <Label alignment="CENTER_RIGHT" prefHeight="95.0" prefWidth="266.0" text="Breackfast">
                <font>
-                  <Font name="Rustico Regular" size="34.0" />
+                  <Font name="Rustico Regular" size="37.0" />
                </font>
-            </Button>
+               <textFill>
+                  <RadialGradient centerX="0.65" centerY="0.5571428571428572" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9078947305679321" green="0.29842835664749146" blue="0.29842835664749146" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
          </children>
       </HBox>
-      <HBox layoutY="108.0" prefHeight="100.0" prefWidth="525.0">
+      <HBox alignment="CENTER" layoutX="208.0" prefHeight="84.0" prefWidth="209.0">
          <children>
-            <Button fx:id="lunchButton" mnemonicParsing="false" prefHeight="128.0" prefWidth="525.0" style="-fx-background-color: #a63232;" text="Lunch">
+            <Label alignment="CENTER_RIGHT" prefHeight="92.0" prefWidth="250.0" text="lunch">
                <font>
-                  <Font name="Rustico Regular" size="34.0" />
+                  <Font name="Rustico Regular" size="37.0" />
                </font>
-            </Button>
+               <textFill>
+                  <RadialGradient centerX="0.65" centerY="0.5571428571428572" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9078947305679321" green="0.29842835664749146" blue="0.29842835664749146" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
          </children>
       </HBox>
-      <HBox layoutY="208.0" prefHeight="100.0" prefWidth="525.0">
+      <HBox alignment="CENTER" layoutX="421.0" layoutY="-1.0" prefHeight="84.0" prefWidth="209.0">
          <children>
-            <Button fx:id="dinnerButton" mnemonicParsing="false" prefHeight="113.0" prefWidth="552.0" style="-fx-background-color: #5e67b8;" text="Dinner">
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="84.0" prefWidth="246.0" text="dinner">
                <font>
-                  <Font name="Rustico Regular" size="34.0" />
+                  <Font name="Rustico Regular" size="37.0" />
                </font>
-            </Button>
+               <textFill>
+                  <RadialGradient centerX="0.65" centerY="0.5571428571428572" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="0.5" green="0.34953704476356506" blue="0.34953704476356506" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9078947305679321" green="0.29842835664749146" blue="0.29842835664749146" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
          </children>
       </HBox>
+      <Separator layoutY="306.0" prefHeight="0.0" prefWidth="731.0" />
    </children>
 </AnchorPane>
