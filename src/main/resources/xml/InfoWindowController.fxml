@@ -4,9 +4,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="892.0" styleClass="chart" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.InfoWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="892.0" style="-fx-background-color: #b88181;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.InfoWindowController">
    <children>
       <HBox prefHeight="100.0" prefWidth="892.0" styleClass="normFun" stylesheets="@../css/style.css">
          <children>
@@ -14,6 +17,22 @@
                <font>
                   <Font name="Rustico Regular" size="40.0" />
                </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6973684430122375" green="0.061342593282461166" blue="0.061342593282461166" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.34210526943206787" green="0.1393762230873108" blue="0.1393762230873108" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
             </Label>
          </children>
       </HBox>
@@ -25,8 +44,29 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="71.0" prefWidth="119.0" text="Name">
                            <font>
-                              <Font name="Rustico Regular" size="31.0" />
+                              <Font name="Rustico Regular" size="32.0" />
                            </font>
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.06457114964723587" green="0.08467348664999008" blue="0.1315789520740509" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.007662835249042145">
+                                       <color>
+                                          <Color red="1.0" green="0.927314817905426" blue="0.27314814925193787" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.49537035822868347" green="1.0" blue="0.6299382448196411" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
                         </Label>
                      </children>
                   </VBox>
@@ -38,6 +78,27 @@
                      <font>
                         <Font name="Rustico Regular" size="32.0" />
                      </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.06457114964723587" green="0.08467348664999008" blue="0.1315789520740509" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="0.0933845043182373" green="0.9605262875556946" blue="0.5269554257392883" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9605262875556946" green="0.8811494708061218" blue="0.2801535129547119" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
                   </Label>
                </children>
             </VBox>
@@ -47,6 +108,27 @@
                      <font>
                         <Font name="Rustico Regular" size="32.0" />
                      </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.06457114964723587" green="0.08467348664999008" blue="0.1315789520740509" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="0.28192007541656494" green="0.6842105388641357" blue="0.4763604700565338" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="0.9206018447875977" blue="0.3194444477558136" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
                   </Label>
                </children>
             </VBox>
@@ -56,13 +138,55 @@
                      <font>
                         <Font name="Rustico Regular" size="32.0" />
                      </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.06457114964723587" green="0.08467348664999008" blue="0.1315789520740509" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="0.8572266697883606" green="0.8815789222717285" blue="0.15101121366024017" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.49537035822868347" green="1.0" blue="0.6299382448196411" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
                   </Label>
                </children>
             </VBox>
             <Label alignment="CENTER" text="Carbohydrates">
                <font>
-                  <Font name="Rustico Regular" size="29.0" />
+                  <Font name="Rustico Regular" size="32.0" />
                </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.06457114964723587" green="0.08467348664999008" blue="0.1315789520740509" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.011494252873563218">
+                           <color>
+                              <Color red="0.8026315569877625" green="0.7743908166885376" blue="0.23781676590442657" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5573830604553223" green="0.9868420958518982" blue="0.6647478342056274" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
             </Label>
          </children>
       </HBox>
@@ -80,7 +204,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelCalories" alignment="CENTER" prefHeight="122.0" prefWidth="169.0" text="Label">
                   <font>
-                     <Font name="Rustico Regular" size="27.0" />
+                     <Font name="Bauhaus" size="27.0" />
                   </font>
                </Label>
             </children>
@@ -89,7 +213,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelProteins" alignment="CENTER" prefHeight="153.0" prefWidth="170.0" text="Label">
                   <font>
-                     <Font name="Rustico Regular" size="27.0" />
+                     <Font name="Bauhaus" size="27.0" />
                   </font>
                </Label>
             </children>
@@ -98,7 +222,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelFats" alignment="CENTER" prefHeight="116.0" prefWidth="191.0" text="Label">
                   <font>
-                     <Font name="Rustico Regular" size="27.0" />
+                     <Font name="Bauhaus" size="27.0" />
                   </font>
                </Label>
             </children>
@@ -107,7 +231,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelCarbo" text="Label">
                   <font>
-                     <Font name="Rustico Regular" size="27.0" />
+                     <Font name="Bauhaus" size="27.0" />
                   </font>
                </Label>
             </children>

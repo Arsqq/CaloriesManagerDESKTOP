@@ -287,12 +287,14 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Pictures/equipment_car-512.png" />
-                                 </image>
-                              </ImageView>
-                              <Button mnemonicParsing="false" onAction="#handleCaloriesNormButton" style="-fx-background-color: #d0e0ad;" />
+                              <Button mnemonicParsing="false" onAction="#handleCaloriesNormButton" style="-fx-background-color: #d0e0ad;">
+                                 <graphic>
+                                    <ImageView fitHeight="148.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Pictures/equipment_car-512.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
                               <HBox prefHeight="100.0" prefWidth="362.0">
                                  <children>
                                     <Label fx:id="normText" alignment="CENTER" prefHeight="94.0" prefWidth="361.0" text="*calories per mealtimes*">
