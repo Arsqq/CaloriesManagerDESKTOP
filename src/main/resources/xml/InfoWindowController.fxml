@@ -195,7 +195,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelName" alignment="CENTER" prefHeight="61.0" prefWidth="159.0" styleClass="font" stylesheets="@../css/style.css" text="Label">
                   <font>
-                     <Font name="Bauhaus" size="27.0" />
+                     <Font name="Lobster" size="27.0" />
                   </font>
                </Label>
             </children>
@@ -204,7 +204,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelCalories" alignment="CENTER" prefHeight="122.0" prefWidth="169.0" text="Label">
                   <font>
-                     <Font name="Bauhaus" size="27.0" />
+                     <Font name="Lobster" size="27.0" />
                   </font>
                </Label>
             </children>
@@ -213,7 +213,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelProteins" alignment="CENTER" prefHeight="153.0" prefWidth="170.0" text="Label">
                   <font>
-                     <Font name="Bauhaus" size="27.0" />
+                     <Font name="Lobster" size="27.0" />
                   </font>
                </Label>
             </children>
@@ -222,7 +222,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelFats" alignment="CENTER" prefHeight="116.0" prefWidth="191.0" text="Label">
                   <font>
-                     <Font name="Bauhaus" size="27.0" />
+                     <Font name="Lobster" size="27.0" />
                   </font>
                </Label>
             </children>
@@ -231,7 +231,7 @@
             <children>
                <Label fx:id="caloriesInfoLabelCarbo" text="Label">
                   <font>
-                     <Font name="Bauhaus" size="27.0" />
+                     <Font name="Lobster" size="27.0" />
                   </font>
                </Label>
             </children>

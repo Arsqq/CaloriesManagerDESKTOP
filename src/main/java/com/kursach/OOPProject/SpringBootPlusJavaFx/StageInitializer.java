@@ -23,8 +23,8 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
     private final ApplicationContext springContext;
 
 
-    @Value("classpath:/xml/InfoWindowController.fxml")
-    private Resource sceneResourse2;
+    @Value("classpath:/xml/Authorization.fxml")
+    private Resource sceneResourceForRegistration;
 
 
 
@@ -37,7 +37,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent>
     {
 
         try {
-            FXMLLoader fxmlLoader= new FXMLLoader(sceneResourse.getURL());
+            FXMLLoader fxmlLoader= new FXMLLoader(sceneResourceForRegistration.getURL());
 
             fxmlLoader.setControllerFactory(springContext::getBean);
             parent=fxmlLoader.load();

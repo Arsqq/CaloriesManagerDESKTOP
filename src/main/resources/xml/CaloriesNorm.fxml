@@ -48,30 +48,26 @@
       </JFXTextArea>
       <Button layoutX="-3.0" layoutY="81.0" mnemonicParsing="false" onAction="#getMorningCombination" prefHeight="189.0" prefWidth="271.0" styleClass="transp" stylesheets="@../css/style.css">
          <graphic>
-            <ImageView fitHeight="187.0" fitWidth="263.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../Downloads/360-3601614_breakfast-icon-png-breakfast-clipart-png-transparent-png.png" />
-               </image>
-            </ImageView>
          </graphic>
          <padding>
             <Insets left="15.0" right="15.0" />
          </padding>
       </Button>
-      <Button layoutX="263.0" layoutY="85.0" mnemonicParsing="false" onAction="#getLunchCombination" prefHeight="0.0" prefWidth="227.0" styleClass="transp" stylesheets="@../css/style.css">
+      <Button layoutX="263.0" layoutY="85.0" mnemonicParsing="false" onAction="#getLunchCombination" prefHeight="190.0" prefWidth="222.0" styleClass="transp" stylesheets="@../css/style.css">
          <graphic>
 
          </graphic>
          <padding>
             <Insets left="10.0" right="15.0" />
          </padding>
+         <graphic>
+            <ImageView fitHeight="193.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+         </graphic>
       </Button>
       <Button layoutX="455.0" layoutY="84.0" mnemonicParsing="false" onAction="#getDinnerCombination" prefHeight="189.0" prefWidth="268.0" styleClass="transp" stylesheets="@../css/style.css">
          <graphic>
             <ImageView fitHeight="187.0" fitWidth="263.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../Downloads/5882071.png" />
-               </image>
             </ImageView>
          </graphic>
          <padding>

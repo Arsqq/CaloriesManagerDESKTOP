@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="574.0" prefWidth="592.0" style="-fx-background-color: #d0e0ad;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.MyInfoController">
+   <children>
+      <AnchorPane prefHeight="110.0" prefWidth="607.0">
+         <children>
+            <HBox alignment="CENTER" layoutY="-9.0" prefHeight="110.0" prefWidth="612.0" style="-fx-background-color: #b3b3b3;" stylesheets="@../css/style.css">
+               <children>
+                  <Label alignment="CENTER" prefHeight="110.0" prefWidth="608.0" text="INFO PANEL">
+                     <font>
+                        <Font name="Lobster" size="50.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4977777777777777" centerY="0.44656486365631337" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.12770294221907133">
+                                 <color>
+                                    <Color red="0.557894766330719" green="0.21658024191856384" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2258064516129032">
+                                 <color>
+                                    <Color red="0.2557660937309265" green="0.7473683953285217" blue="0.13286550343036652" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.36570955925794646">
+                                 <color>
+                                    <Color red="0.8736842274665833" green="0.2651253938674927" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6401098901098903">
+                                 <color>
+                                    <Color red="0.8631578683853149" green="0.20097725093364716" blue="0.09910331666469574" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7142857142857145">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.6882469058036804" blue="0.6694347262382507" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8186813186813188">
+                                 <color>
+                                    <Color red="0.2925925850868225" green="0.48123782873153687" blue="0.8315789699554443" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6842105388641357" green="0.1351526975631714" blue="0.05068226158618927" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="-4.0" layoutY="110.0" prefHeight="468.0" prefWidth="170.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="125.0" prefWidth="214.0" text="UserName">
+                     <font>
+                        <Font name="Lobster" size="34.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9969278033794162">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="109.0" prefWidth="184.0" text="BodyMassIndex">
+                     <font>
+                        <Font name="Lobster" size="25.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9969278033794162">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="129.0" prefWidth="186.0" text="DailyCaloriesIntake">
+                     <font>
+                        <Font name="Lobster" size="19.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9969278033794162">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="109.0" prefWidth="170.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="136.0" prefWidth="192.0" text="Height">
+                     <font>
+                        <Font name="Lobster" size="34.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9969278033794162">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="91.0" prefWidth="170.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="140.0" prefWidth="235.0" text="Weight">
+                     <font>
+                        <Font name="Lobster" size="34.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.8526315689086914" green="0.15473684668540955" blue="0.15473684668540955" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9969278033794162">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.22468207776546478" green="0.46000000834465027" blue="0.11500000208616257" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Separator layoutX="167.0" layoutY="97.0" orientation="VERTICAL" prefHeight="482.0" prefWidth="2.0" stylesheets="@../css/style.css" />
+      <AnchorPane layoutX="170.0" layoutY="98.0" prefHeight="300.0" prefWidth="430.0">
+         <children>
+            <Separator layoutX="-171.0" prefHeight="4.0" prefWidth="612.0" stylesheets="@../css/style.css" />
+            <Separator layoutX="-173.0" layoutY="86.0" prefHeight="4.0" prefWidth="614.0" stylesheets="@../css/style.css" />
+            <Separator layoutX="-173.0" layoutY="188.0" prefHeight="4.0" prefWidth="614.0" stylesheets="@../css/style.css" />
+            <HBox alignment="CENTER" layoutY="2.0" prefHeight="84.0" prefWidth="434.0">
+               <children>
+                  <Label fx:id="userNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="106.0" prefWidth="461.0" text="Label">
+                     <font>
+                        <Font name="Lobster" size="34.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4977777777777777" centerY="0.44656486365631337" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.12770294221907133">
+                                 <color>
+                                    <Color red="0.557894766330719" green="0.21658024191856384" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2258064516129032">
+                                 <color>
+                                    <Color red="0.2557660937309265" green="0.7473683953285217" blue="0.13286550343036652" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.36570955925794646">
+                                 <color>
+                                    <Color red="0.8736842274665833" green="0.2651253938674927" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6401098901098903">
+                                 <color>
+                                    <Color red="0.8631578683853149" green="0.20097725093364716" blue="0.09910331666469574" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7142857142857145">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.6882469058036804" blue="0.6694347262382507" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8186813186813188">
+                                 <color>
+                                    <Color red="0.2925925850868225" green="0.48123782873153687" blue="0.8315789699554443" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6842105388641357" green="0.1351526975631714" blue="0.05068226158618927" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="90.0" prefHeight="100.0" prefWidth="434.0">
+               <children>
+                  <Label fx:id="bodyMassIndexLabel" alignment="CENTER" prefHeight="115.0" prefWidth="594.0" text="Label">
+                     <font>
+                        <Font name="Lobster" size="25.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4977777777777777" centerY="0.44656486365631337" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.12770294221907133">
+                                 <color>
+                                    <Color red="0.557894766330719" green="0.21658024191856384" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2258064516129032">
+                                 <color>
+                                    <Color red="0.2557660937309265" green="0.7473683953285217" blue="0.13286550343036652" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.36570955925794646">
+                                 <color>
+                                    <Color red="0.8736842274665833" green="0.2651253938674927" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6401098901098903">
+                                 <color>
+                                    <Color red="0.8631578683853149" green="0.20097725093364716" blue="0.09910331666469574" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7142857142857145">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.6882469058036804" blue="0.6694347262382507" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8186813186813188">
+                                 <color>
+                                    <Color red="0.2925925850868225" green="0.48123782873153687" blue="0.8315789699554443" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6842105388641357" green="0.1351526975631714" blue="0.05068226158618927" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="192.0" prefHeight="110.0" prefWidth="434.0">
+               <children>
+                  <Label fx:id="dailyCaloriesIntakeLabel" alignment="CENTER" prefHeight="218.0" prefWidth="489.0" text="Label">
+                     <font>
+                        <Font name="Lobster" size="25.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4977777777777777" centerY="0.44656486365631337" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.12770294221907133">
+                                 <color>
+                                    <Color red="0.557894766330719" green="0.21658024191856384" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2258064516129032">
+                                 <color>
+                                    <Color red="0.2557660937309265" green="0.7473683953285217" blue="0.13286550343036652" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.36570955925794646">
+                                 <color>
+                                    <Color red="0.8736842274665833" green="0.2651253938674927" blue="0.17150098085403442" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6401098901098903">
+                                 <color>
+                                    <Color red="0.8631578683853149" green="0.20097725093364716" blue="0.09910331666469574" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7142857142857145">
+                                 <color>
+                                    <Color red="0.8105263113975525" green="0.6882469058036804" blue="0.6694347262382507" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8186813186813188">
+                                 <color>
+                                    <Color red="0.2925925850868225" green="0.48123782873153687" blue="0.8315789699554443" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6842105388641357" green="0.1351526975631714" blue="0.05068226158618927" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="-4.0" layoutY="398.0" prefHeight="4.0" prefWidth="614.0" stylesheets="@../css/style.css" />
+      <Separator layoutX="-3.0" layoutY="484.0" prefHeight="4.0" prefWidth="614.0" stylesheets="@../css/style.css" />
+      <Separator layoutX="-3.0" layoutY="575.0" prefHeight="4.0" prefWidth="614.0" stylesheets="@../css/style.css" />
+      <HBox alignment="CENTER" layoutX="166.0" layoutY="398.0" prefHeight="86.0" prefWidth="434.0">
+         <children>
+            <Label fx:id="heightLabel" alignment="CENTER" prefHeight="151.0" prefWidth="494.0" text="Label">
+               <font>
+                  <Font name="Lobster" size="34.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.4977777777777777" centerY="0.44656486365631337" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007680491551459294">
+                           <color>
+                              <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.12770294221907133">
+                           <color>
+                              <Color red="0.557894766330719" green="0.21658024191856384" blue="0.17150098085403442" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.2258064516129032">
+                           <color>
+                              <Color red="0.2557660937309265" green="0.7473683953285217" blue="0.13286550343036652" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.36570955925794646">
+                           <color>
+                              <Color red="0.8736842274665833" green="0.2651253938674927" blue="0.17150098085403442" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6401098901098903">
+                           <color>
+                              <Color red="0.8631578683853149" green="0.20097725093364716" blue="0.09910331666469574" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7142857142857145">
+                           <color>
+                              <Color red="0.8105263113975525" green="0.6882469058036804" blue="0.6694347262382507" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8186813186813188">
+                           <color>
+                              <Color red="0.2925925850868225" green="0.48123782873153687" blue="0.8315789699554443" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6842105388641357" green="0.1351526975631714" blue="0.05068226158618927" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="173.0" layoutY="484.0" prefHeight="100.0" prefWidth="434.0">
+         <children>
+            <Label fx:id="weightLabel" alignment="CENTER" prefHeight="205.0" prefWidth="495.0" text="Label">
+               <font>
+                  <Font name="Lobster" size="34.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.4977777777777777" centerY="0.44656486365631337" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007680491551459294">
+                           <color>
+                              <Color red="0.7684210538864136" green="0.042690057307481766" blue="0.042690057307481766" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.12770294221907133">
+                           <color>
+                              <Color red="0.557894766330719" green="0.21658024191856384" blue="0.17150098085403442" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.2258064516129032">
+                           <color>
+                              <Color red="0.2557660937309265" green="0.7473683953285217" blue="0.13286550343036652" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.36570955925794646">
+                           <color>
+                              <Color red="0.8736842274665833" green="0.2651253938674927" blue="0.17150098085403442" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6401098901098903">
+                           <color>
+                              <Color red="0.8631578683853149" green="0.20097725093364716" blue="0.09910331666469574" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7142857142857145">
+                           <color>
+                              <Color red="0.8105263113975525" green="0.6882469058036804" blue="0.6694347262382507" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.8186813186813188">
+                           <color>
+                              <Color red="0.2925925850868225" green="0.48123782873153687" blue="0.8315789699554443" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6842105388641357" green="0.1351526975631714" blue="0.05068226158618927" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

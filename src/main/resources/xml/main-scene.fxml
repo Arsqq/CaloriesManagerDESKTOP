@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parentAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" styleClass="primary-color" stylesheets="@../css/lightmode.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.MainSceneController">
+<AnchorPane fx:id="parentAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1315.0" styleClass="primary-color" stylesheets="@../css/lightmode.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.MainSceneController">
    <BorderPane fx:id="parent" layoutX="-6.0" prefHeight="200.0" prefWidth="200.0" styleClass="primary-color" stylesheets="@../css/lightmode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
       <left>
          <VBox fx:id="rightVbox" alignment="TOP_CENTER" prefHeight="810.0" prefWidth="431.0" style="-fx-background-color: #BAEAC3;" BorderPane.alignment="TOP_LEFT">
@@ -53,7 +53,7 @@
                   <String fx:value="shadow" />
                </styleClass>
             </HBox>
-            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="543.0" prefWidth="370.0" styleClass="chosenFun" stylesheets="@../css/style.css">
+            <VBox alignment="CENTER" fillWidth="false" prefHeight="406.0" prefWidth="331.0" styleClass="chosenFun" stylesheets="@../css/style.css">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" top="60.0" />
                </VBox.margin>
@@ -61,7 +61,7 @@
                   <children>
                      <Label fx:id="countLabel" alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="BMI count">
                         <font>
-                           <Font name="Cambria Bold" size="36.0" />
+                           <Font name="Lobster" size="36.0" />
                         </font>
                         <HBox.margin>
                            <Insets />
@@ -107,7 +107,7 @@
                </HBox>
                <AnchorPane prefHeight="134.0" prefWidth="351.0">
                   <children>
-                     <Button fx:id="bodyMassIndexButton" alignment="CENTER" layoutX="49.0" layoutY="23.0" mnemonicParsing="false" onAction="#setBodyMassLabels" prefHeight="49.0" prefWidth="234.0" styleClass="addBtn" stylesheets="@../css/style.css" text="EXECUTE">
+                     <Button fx:id="bodyMassIndexButton" alignment="CENTER" layoutX="49.0" layoutY="23.0" mnemonicParsing="false" onAction="#setBodyMassLabels" prefHeight="74.0" prefWidth="234.0" styleClass="addBtn" stylesheets="@../css/style.css" text="EXECUTE">
                         <font>
                            <Font name="Rustico Regular" size="24.0" />
                         </font>
@@ -115,6 +115,18 @@
                   </children>
                </AnchorPane>
             </VBox>
+            <HBox alignment="CENTER" prefHeight="134.0" prefWidth="431.0">
+               <children>
+                  <JFXButton fx:id="myInfoButton" onAction="#handleInfoButton" prefHeight="82.0" prefWidth="407.0" style="-fx-background-color: #F39C63; -fx-background-radius: 25;" text="MyInfo">
+                     <font>
+                        <Font name="Lobster" size="34.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
          </VBox>
       </left>
       <center>
@@ -162,7 +174,7 @@
                      </HBox.margin>
                      <Label fx:id="shoppingCartLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="Fill your shopping cart" textFill="#858585">
                         <font>
-                           <Font name="Cambria Bold" size="20.0" />
+                           <Font name="Lobster" size="20.0" />
                         </font>
                      </Label>
                      <Label fx:id="groceriesLabel" alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="*with groceries you have*" textFill="#858585">
@@ -190,7 +202,7 @@
                         <children>
                            <Label fx:id="planLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="daily calorie intake" textFill="#858585">
                               <font>
-                                 <Font name="Cambria Bold" size="20.0" />
+                                 <Font name="Lobster" size="20.0" />
                               </font>
                            </Label>
                            <Label fx:id="dietNumLabel" alignment="CENTER" prefHeight="40.0" prefWidth="262.0" text="*amount of calories per day*" textFill="#858585">
@@ -241,7 +253,7 @@
                                  <children>
                                     <Label fx:id="randomizerLabel" alignment="CENTER" prefHeight="60.0" prefWidth="222.0" text="Randomizer">
                                        <font>
-                                          <Font name="Cambria Bold" size="36.0" />
+                                          <Font name="Lobster" size="36.0" />
                                        </font>
                                        <HBox.margin>
                                           <Insets />
@@ -279,7 +291,7 @@
                                  <children>
                                     <Label fx:id="caloriesNormLabel" alignment="CENTER" prefHeight="46.0" prefWidth="266.0" text="CaloriesNorm">
                                        <font>
-                                          <Font name="Cambria Bold" size="36.0" />
+                                          <Font name="Lobster" size="36.0" />
                                        </font>
                                        <HBox.margin>
                                           <Insets />
@@ -312,7 +324,7 @@
                                  <children>
                                     <Label fx:id="caloriesDiaryLabel" alignment="CENTER" prefHeight="46.0" prefWidth="292.0" text="CaloriesDiary">
                                        <font>
-                                          <Font name="Cambria Bold" size="36.0" />
+                                          <Font name="Lobster" size="36.0" />
                                        </font>
                                        <HBox.margin>
                                           <Insets />

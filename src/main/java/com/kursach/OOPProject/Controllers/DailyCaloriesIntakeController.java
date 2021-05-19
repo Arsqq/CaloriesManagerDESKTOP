@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.kursach.OOPProject.Services.MajorFunctionsService;
+import com.kursach.OOPProject.models.UsersIndInfo;
+import com.kursach.OOPProject.repo.UsersInfoRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -41,8 +43,26 @@ public class DailyCaloriesIntakeController
     @FXML
     private Label intakeLabel;
 
+    @Autowired
+    UsersIndInfo usersIndInfo;
+
+    @Autowired
+    UsersInfoRepository usersInfoRepository;
+
+    @Autowired
+    AuthorizationController authorizationController;
 
 
+    @FXML
+    void handleIntakeButton()
+    {
+        intakeLabel.setText(String.valueOf(((majorFunctionsService.getDailyIntake
+                (ageTextField,weightTextField,heightTextFiield,maleBox,femaleBox,activityBox)))));
+        usersIndInfo=usersInfoRepository.findByUserName(authorizationController.getCURRENT_USER());
+        usersIndInfo.setDailyCaloriesIntake(majorFunctionsService.getDailyIntake
+                (ageTextField,weightTextField,heightTextFiield,maleBox,femaleBox,activityBox));
+        usersInfoRepository.save(usersIndInfo);
+    }
     @FXML
     void initialize()
     {
@@ -50,8 +70,7 @@ public class DailyCaloriesIntakeController
         activityBox.setItems(physActivity);
         activityBox.setValue("Low");
 
-         intakeButton.setOnAction(b->
-                intakeLabel.setText(String.valueOf(((majorFunctionsService.getDailyIntake(ageTextField,weightTextField,heightTextFiield,maleBox,femaleBox,activityBox))))));
+
     }
 
 }

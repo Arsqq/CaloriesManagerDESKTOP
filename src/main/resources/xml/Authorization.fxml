@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="596.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kursach.OOPProject.Controllers.AuthorizationController">
+   <children>
+      <TextField fx:id="loginAuthorizationField" layoutX="182.0" layoutY="187.0" prefHeight="38.0" prefWidth="254.0" promptText="Login/Mail" style="-fx-border-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+         <font>
+            <Font name="Lobster" size="17.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordAuthorizationField" layoutX="182.0" layoutY="253.0" prefHeight="38.0" prefWidth="254.0" promptText="Password" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+         <font>
+            <Font name="Lobster" size="17.0" />
+         </font>
+      </PasswordField>
+      <Label layoutX="204.0" layoutY="129.0" text="Authorizartion">
+         <font>
+            <Font name="Lobster" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="loginButton" layoutX="256.0" layoutY="316.0" onAction="#handleLoginButton" prefHeight="37.0" prefWidth="105.0" ripplerFill="#dc1b1b" style="-fx-background-color: #F39C63;" text="login">
+         <font>
+            <Font name="Lobster" size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="-50.0" layoutY="-59.0" prefHeight="176.0" prefWidth="630.0">
+         <children>
+            <Label alignment="CENTER" layoutX="49.0" layoutY="56.0" prefHeight="116.0" prefWidth="619.0" style="-fx-background-color: #89c4fa;" text="Calories manager">
+               <font>
+                  <Font name="Rustico Regular" size="51.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="registrationButton" layoutX="553.0" layoutY="56.0" onAction="#handleRegistrationButton" prefHeight="38.0" prefWidth="115.0" ripplerFill="#dc1b1b" style="-fx-background-color: #F39C63;" text="Regustration">
+               <font>
+                  <Font name="Lobster" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXCheckBox fx:id="passwordCheckBox" layoutX="455.0" layoutY="263.0" style="-fx-border-color: #fafafa; -fx-border-color: silver;" text="Show Password" textFill="#c9c0c0">
+         <font>
+            <Font name="Lobster" size="19.0" />
+         </font>
+      </JFXCheckBox>
+   </children>
+</AnchorPane>

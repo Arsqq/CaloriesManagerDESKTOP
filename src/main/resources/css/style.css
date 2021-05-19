@@ -83,3 +83,7 @@
     -fx-background-color: #e0de9d  ;
     -fx-background-radius: 30;
 }
+.separator{
+    -fx-background-color: #e79423;
+    -fx-background-radius: 2;
+}

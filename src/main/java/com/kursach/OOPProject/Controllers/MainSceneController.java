@@ -1,11 +1,14 @@
 package com.kursach.OOPProject.Controllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.kursach.OOPProject.Services.MajorFunctionsService;
 import com.kursach.OOPProject.Services.MinorFunctionsService;
 import com.kursach.OOPProject.models.AllProducts;
 import com.kursach.OOPProject.models.CustomersProducts;
 import com.kursach.OOPProject.models.Dishes;
+import com.kursach.OOPProject.models.UsersIndInfo;
 import com.kursach.OOPProject.repo.DishesRepository;
+import com.kursach.OOPProject.repo.UsersInfoRepository;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -87,6 +90,9 @@ public class MainSceneController
 
     @FXML
     private Label randomTextLabel;
+
+    @FXML
+    private JFXButton myInfoButton;
 
     @FXML
     private Label caloriesNormLabel;
@@ -201,19 +207,44 @@ public class MainSceneController
     }
 
     @Value("classpath:/xml/RandomDish.fxml")
-    private Resource sceneResourseForRandomDish;
+    private Resource sceneResourceForRandomDish;
 
     @Autowired
     RandomDishController randomDishController;
 
+    @Autowired
+    AuthorizationController authorizationController;
+
+    @Autowired
+    UsersIndInfo usersIndInfo;
+
+    @Autowired
+    UsersInfoRepository usersInfoRepository;
+
+    @FXML
+    void handleMyInfoButton()
+    {
+
+    }
+
     @FXML
     void handleRandomButton()
     {
-        generateFXML(sceneResourseForRandomDish);
+        generateFXML(sceneResourceForRandomDish);
         randomDishController.setRandomImage(randomDishController.getImage());
     }
 
-    private void generateFXML(Resource sceneResource) {
+
+    @Value("classpath:/xml/MyInfo.fxml")
+    private Resource sceneResourceForMyInfo;
+
+    @FXML
+    void handleInfoButton()
+    {
+        generateFXML(sceneResourceForMyInfo);
+    }
+
+    public void generateFXML(Resource sceneResource) {
         try {
             FXMLLoader loader = new FXMLLoader(sceneResource.getURL());
             loader.setControllerFactory(springContext::getBean);
@@ -239,12 +270,22 @@ public class MainSceneController
         }
 
 
+
+
         public void setBodyMassLabels()
         {
             try
             {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION,"BMI ="+calculatorService.bmiCalculation(weightTextField.getText(),heightTextField.getText()), ButtonType.APPLY);
                 alert.show();
+
+               usersIndInfo=usersInfoRepository.findByUserName(authorizationController.getCURRENT_USER());
+               usersIndInfo.setHeight(Double.parseDouble(heightTextField.getText()));
+               usersIndInfo.setWeight(Double.parseDouble(weightTextField.getText()));
+                usersIndInfo.setBodyMassIndex(calculatorService.bmiCalculation(weightTextField.getText(),heightTextField.getText()));
+               usersInfoRepository.save(usersIndInfo);
+
+
             }
             catch (NumberFormatException num)
             {
